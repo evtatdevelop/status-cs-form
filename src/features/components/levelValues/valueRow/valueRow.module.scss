@@ -1,0 +1,119 @@
+.valueRow{
+  padding: .1vmax;
+  outline: .1vmax solid gray;
+  margin-bottom: .5vmax;
+  margin-right: .5vmax;
+
+  .wrapperBtn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // margin-bottom: .5vmax;
+    // align-items: center;
+    min-height: 2vmax;
+    background-color: transparent;
+    color: gray;
+    padding: 0;
+
+    &.incomplete {
+      background-color:#2aadff1f;
+      // color: rgba(144, 238, 144, 0.445);
+      color: #2aadff;
+    }
+
+    div {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      text-align: left;
+      padding: .5vmax;
+      // margin-right: .5vmax;
+      font-weight: 400;
+      overflow: hidden;
+      // background-color: rgb(187, 187, 187);
+    }
+
+    .visualCheck{
+      justify-content: center;
+      width: 4vmax;
+      flex-grow: 0;
+      flex-shrink: 0;
+      // outline: 1px solid green;
+    }
+    
+    .visualCode{
+      min-width: 3vmax;
+      max-width: 85%;
+      overflow: hidden;
+      flex-grow: 0;
+      flex-shrink: 0;
+      border-left: .1vmax dotted grey;
+      // outline: 1px solid red;
+      margin-right: .1vmax;
+    }
+    .visualName{
+      min-width: 3vmax;
+      max-width: 95%;
+      overflow: hidden;
+      border-left: .1vmax dotted grey;
+      flex-grow: 1;
+      // outline: 1px solid blue;
+    }
+    
+    transition: background-color .1s;
+    &:hover,
+    &:focus {
+      background-color: rgba(135, 206, 250, 0.548);
+    }    
+  }
+
+  //
+  // Dark styles
+  //
+  &.dark {
+    .wrapperBtn {
+      color: gray;
+  
+      &.incomplete {
+        background-color:rgba(144, 238, 144, 0.062);
+        color: rgba(144, 238, 144, 0.445);
+      }
+      
+      .visualCode{
+        border-left: .1vmax dotted grey;
+      }
+      .visualName{
+         border-left: .1vmax dotted grey;
+      }
+      &:hover,
+      &:focus {
+        background-color: #ffffff18
+      }    
+    }
+  }
+  
+
+}
+
+@media screen and (min-width: 1300px) {
+  .valueRow{
+    padding: .1vmax;
+    margin-bottom: .3vmax;
+    margin-right: .5vmax;
+  
+    .wrapperBtn {
+      min-height: 2vmax;
+
+      div {
+        padding: .5vmax;
+        font-weight: 400;
+      }
+     
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}

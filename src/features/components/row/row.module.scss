@@ -1,0 +1,29 @@
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  // padding: .5vmax 0;
+  font-weight: 500;
+
+  // outline: 1px solid red;
+
+  // label {
+  //   width: 25%;
+  //   margin-right: 1vmax;
+  //   font-weight: 700;
+  // }
+
+}
+
+@media screen and (min-width: 1300px) {
+  .row {
+    font-size: .8vmax;
+  
+  }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}

@@ -1,0 +1,145 @@
+.approvals {
+  animation: appearance 700ms ease-in-out forwards;
+
+  .btnRouteApproval {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 20px;
+    height: 7vh;
+    margin-bottom: .3vmax;
+    background-color: transparent;
+    color: #161619;
+    border: .1vmax solid gray;
+    // border-radius: .3vmax;
+    padding: 1vmax;
+    text-align: left;
+    cursor: pointer;
+    color: #161619;
+    text-align: center;
+    transition: background-color .3s;
+
+    &:hover,
+    &:focus {
+      background-color: lightskyblue
+    }
+
+    .loader {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      svg {
+        width: 3vmax;
+        height: 3vmax;
+      }
+    }    
+  }
+
+  .approvalLists {
+    font: inherit;
+    font-weight: 400;
+    font-size: 1vmax;
+
+    .approvalCaption {
+      font-weight: 500;
+      font-size: 1.2vmax;
+      margin-bottom: 1.5vmax;
+    }
+
+    .tabHeadApproval {
+      // color: #aaa9a9;
+      width: 100%;
+      display: grid;
+      gap: 1px; 
+      grid-template-columns: 25% 37.5% auto;
+      margin-bottom: 1.5vmax; 
+
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1vmax;
+        outline: .1vmax dotted rgba(128, 128, 128, 0.24);
+      }
+    }
+  }
+
+  //
+  // Dark styles
+  //
+  &.dark {
+    .btnRouteApproval {
+      background-color: transparent;
+      border: .1vmax solid gray;
+      color: wheat;
+
+      &:hover,
+      &:focus {
+        background-color: #ffffff18;
+      }
+    }
+    
+    .approvalLists {
+      .tabHeadApproval {
+        color: #aaa9a9; 
+  
+        & > div {
+          outline: .1vmax dotted rgba(128, 128, 128, 0.24);
+        }
+      }
+    }    
+  }
+
+  @keyframes appearance {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}  
+
+@media screen and (min-width: 1300px) {
+  .approvals {
+    animation: appearance 700ms ease-in-out forwards;
+  
+    .btnRouteApproval {
+      min-height: 20px;
+      height: 7vh;
+      margin-bottom: .3vmax;
+      padding: 1vmax;
+      font-size: .8vmax;
+
+      .loader {
+        
+        svg {
+          width: 1.5vmax;
+          height: 1.5vmax;
+        }
+      }    
+    }
+  
+    .approvalLists {
+      font: inherit;
+      font-weight: 400;
+      font-size: .8vmax;
+      
+      .approvalCaption {
+        font-weight: 500;
+        font-size: .8vmax;
+      }
+
+    }
+  }   
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+}

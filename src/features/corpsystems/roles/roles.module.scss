@@ -1,0 +1,91 @@
+.roles {
+  display: flex;
+  flex-direction: column;
+
+  .roleRow {
+    display: flex;
+    width: 100%;
+    
+    label {
+      margin-top: .5vmax;
+      font-weight: 500;
+    }
+  }
+
+  .roleList {
+    width: 75%;
+    list-style-type: decimal;
+    
+    .btnRoleForm {
+      width: 100%;
+      min-height: 20px;
+      height: 3.2vmax;
+      margin-bottom: .3vmax;
+      background-color: transparent;
+      color: #161619;
+      border: .1vmax solid gray;
+      // border-radius: .3vmax;
+      // padding: 1vmax;
+      text-align: left;
+      cursor: pointer;
+      color: #161619;
+      text-align: center;
+      transition: background-color .3s;
+      // font-size: 1vmax;
+      
+      margin: 0;
+      padding: 0;
+
+      &:hover,
+      &:focus {
+        background-color: lightskyblue
+      }
+    }
+  }
+
+  //
+  // Dark styles
+  //
+  &.dark {
+    .btnRoleForm {
+      background-color: transparent;
+      color: white;
+      border: .1vmax solid gray;
+      &.btnRoleForm {
+        color: wheat;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #ffffff18
+      }
+    }
+  }  
+}
+
+@media screen and (min-width: 1300px) {
+  .roles {
+    font-size: .8vmax;
+    .roleRow {
+      label {
+        margin-top: .5vmax;
+        font-weight: 500;
+      }
+    }
+    .roleList {
+      width: 75%;
+      list-style-type: decimal;
+      
+      .btnRoleForm {
+        width: 100%;
+        min-height: 20px;
+        height: 2.48vmax;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}

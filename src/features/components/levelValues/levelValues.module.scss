@@ -1,0 +1,617 @@
+.selectInput {
+  // position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .inputWrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    
+    .htmInput {
+      width: 100%;
+      padding: .7vmax 3vmax .7vmax 1vmax;
+      font: inherit;
+      letter-spacing: .01vmax;
+      font-size: inherit;
+      font-weight: 400;
+      font-size: 1vmax;
+      color: #424242;
+      border-bottom: .1vmax solid #42424279;
+      // border-radius: .1vmax;
+      background-color: transparent;
+      transition: background-color 1s;
+      
+      &:focus {
+        outline: none;
+        color: navy;
+        background-color: rgba(135, 206, 250, 0.5);
+      }
+    }
+
+    .clearBtn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+      width: 2vmax;
+      height: 2vmax;
+      color: gray;
+      transition: color .3s;
+      font-size: 1.7vmax;
+      font-weight: 100;
+      opacity: 0;
+      transition: opacity .3s;
+      border-radius: .1vmax;
+
+      &.showClnBtn {
+        opacity: 1;
+      }
+
+      &:focus,
+      &:hover {
+        color: red;
+      } 
+    }
+    
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+      width: 2vmax;
+      height: 2vmax;
+      opacity: 0;
+      transition: opacity .3s;
+      border-radius: .1vmax;
+
+      &.showLoading {
+        opacity: 1;
+      }
+    }     
+  }
+
+
+
+  .window {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 1vmax;
+    border: .1vmax solid gray;
+    width: 74vw;
+    left: 50%;
+    margin-left: -37vw;
+    height: 84vh;
+    top: 50%;
+    margin-top: -42vh;
+    background-color: #f6f6fb;
+    z-index: 999;
+
+    .header {
+      margin-bottom: 1vmax;
+    }
+
+    .tableHead {
+      display: flex;
+      min-height: 6vmax;
+      margin-left: .1vmax;
+      margin-right: .1vmax;
+      margin-top: 1vmax;
+      outline: .1vmax solid grey;
+      align-items: center;
+      padding: .1vmax;
+      overflow-y: scroll;
+      scrollbar-color: transparent transparent;
+      &::-webkit-scrollbar-track { background: transparent; }
+      &::-webkit-scrollbar-thumb { background-color: transparent; }
+      
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .5vmax;
+        font-weight: 700;
+        height: 5vmax;
+        overflow: hidden;
+      }
+
+      .headCheck{
+        justify-content: center;
+        width: 4vmax;
+        flex-grow: 0;
+        flex-shrink: 0;
+        // outline: 1px solid green;
+
+        .checklAll {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 1.5vmax;
+          height: 1.5vmax;
+          background-color: transparent;
+          padding: 0;
+          margin: 0;
+          outline: .1vmax solid grey;
+          color: transparent;
+          transition: color .3s;
+
+          &.notAll {
+            color: gray;
+          }
+          &.all {
+            color: #2aadff;
+          }
+
+          &:hover,
+          &:focus {
+            background-color: #ffffff18
+          }
+        }
+      }
+      .headCode{
+        min-width: 3vmax;
+        max-width: 85%;
+        overflow: hidden;
+        flex-grow: 0;
+        flex-shrink: 0;
+        border-left: .1vmax dotted grey;
+      }
+      .headName{
+        min-width: 3vmax;
+        max-width: 95%;
+        overflow: hidden;
+        border-left: .1vmax dotted grey;
+        flex-grow: 1;
+      }      
+    }
+    .main {
+      position: relative;
+      flex-grow: 1;
+      width: 100%;
+
+      overflow-y: scroll;
+      padding: .1vmax;
+      padding-top: .5vmax;
+      padding-bottom: .5vmax;
+      margin: 0;
+      margin-top: .1vmax;
+      margin-bottom: 1vmax;
+      
+      
+      .allAllsArea {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: .1vmax;
+        padding-right: 2vmax;
+        outline: .1vmax solid gray;
+        margin-bottom: .5vmax;
+        margin-right: .5vmax;
+        background-color: #ffffff18;
+        // overflow-y: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: .1vmax;
+
+        button {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0;
+          padding-right: 1vmax;
+          background-color: transparent;
+          color: #2aadff;
+          font-weight:700;
+          min-height: 3vmax;
+
+          .visualCheck {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: .5vmax;
+            font-weight: 400;
+            overflow: hidden;              
+            justify-content: center;
+            width: 4vmax;
+            flex-grow: 0;
+            flex-shrink: 0;
+            // outline: 1px solid green;
+          }
+
+          &:hover {
+            background-color: rgba(135, 206, 250, 0.548);
+          }
+        }
+
+        .infoArea {
+          position: absolute;
+          right: 3vmax;
+          top: 1.3vmax;
+          
+
+          .showInfoBtn {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3vmax;
+            height: 3vmax;
+            border-radius: 1.5vmax;
+            background-color: white;
+            color: #2aadff;
+            cursor: pointer;  
+            font-size: 2vmax;
+            transition: background-color .3s, color .3s, border .3s;
+            border: .1vmax solid #2aadff;
+            animation: appear 1300ms ease-out forwards;
+
+            &:hover {
+              border: .1vmax solid #0b8fe0;;
+            }
+          }          
+        }
+        // .closeAllsAria{
+        //   display: flex;
+        // }
+
+        animation: appear 1300ms ease-out forwards;
+        @keyframes appear {
+          0% {
+            opacity: .0;
+            max-height: 0vh;
+          }
+          50% {
+            opacity: 1;
+            // max-height: 15vh;
+          }
+          100% {
+            max-height: 30vh;
+          }
+        }        
+      }
+
+
+    }
+
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        width: 25%;
+        min-height: 20px;
+        height: 3vmax;
+        margin-bottom: .3vmax;
+        background-color: transparent;
+        color: #161619;
+        // color: wheat;
+        border: .1vmax solid gray;
+        border-radius: .3vmax;
+        // padding: 1vmax;
+        text-align: left;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color .3s;
+  
+        &:hover,
+        &:focus {
+          background-color: lightskyblue
+        }
+      }      
+    }
+
+    animation: appearance 300ms ease-in-out forwards;
+    @keyframes appearance {
+      0% {
+        opacity: .3;
+      }
+      80% {
+      }
+      100% {
+        opacity: .99;
+      }
+    }
+
+  }
+
+
+
+  //
+  // Dark styles
+  //
+  &.dark {
+    .htmInput {
+      // color: gray;
+      color: rgb(170, 169, 169);
+        
+
+      &:focus {
+        color: rgb(207, 207, 229);
+        background-color: rgba(0, 0, 128, 0.036);
+      }
+    }   
+    .clearBtn {
+      &:focus,
+      &:hover {
+        color: coral;
+      } 
+    }
+
+
+    .window {
+      border: .1vmax solid gray;
+      background-color: rgb(34, 34, 34);
+  
+      .tableHead {
+  
+        .headCheck {  
+          .checklAll {
+            // outline: .1vmax solid grey;
+  
+            &.notAll {
+              color: gray;
+            }
+            &.all {
+              color: lightgreen;
+            }
+  
+            &:hover,
+            &:focus {
+              background-color: #ffffff18
+            }
+          }
+        }
+        .headCode{
+          // border-left: .1vmax dotted grey;
+        }
+        .headName{
+          // border-left: .1vmax dotted grey;
+        }      
+      }
+      .main {
+        // position: relative;
+
+        .allAllsArea {
+          // position: relative;
+          // display: flex;
+          // flex-direction: column;
+          // outline: .1vmax solid gray;
+          background-color: #ffffff18;
+          // overflow-y: auto;
+          // overflow-x: hidden;
+          // padding: .1vmax;
+          // min-height: 4.5vmax;
+
+          // .allList {
+
+            button {
+              // width: 100%;
+              // display: flex;
+              // padding: 0;
+              // align-items: center;
+              background-color: transparent;
+              color: wheat;
+              // min-height: 3vmax;
+              &:hover {
+                background-color: rgb(66, 66, 66);
+              }
+
+              .visualCheck {
+                // display: flex;
+                // align-items: center;
+                // text-align: left;
+                // padding: .5vmax;
+                // font-weight: 400;
+                // overflow: hidden;
+                // justify-content: center;
+                // width: 4vmax;
+                // flex-grow: 0;
+                // flex-shrink: 0;
+              }
+
+            }
+          // }
+            
+
+          .infoArea {
+            // position: absolute;
+            // right: 3vmax;
+            // top: 1.3vmax;
+            
+            .showInfoBtn {
+              // padding: 0;
+              // margin: 0;
+              background-color: transparent;
+              color: rgba(245, 222, 179, 0.514);
+              // cursor: pointer;  
+              // font-size: 2vmax;
+              // transition: background-color .3s, color .3s, border .3s;
+              border: .1vmax solid rgba(245, 222, 179, 0.658);
+              animation: appear 1300ms ease-out forwards;
+
+              &:hover {
+                border: .1vmax solid wheat;
+              }
+            }          
+          }
+  
+          // animation: appear 1300ms ease-out forwards;
+          // @keyframes appear {
+          //   0% {
+          //     opacity: .0;
+          //     max-height: 0vh;
+          //   }
+          //   50% {
+          //     opacity: 1;
+          //     // max-height: 15vh;
+          //   }
+          //   100% {
+          //     max-height: 30vh;
+          //   }
+          // }        
+        }        
+      }
+  
+  
+      .footer {
+  
+        button {
+          color: wheat;
+          &:hover,
+          &:focus {
+            background-color: #ffffff18
+          }
+        }      
+      }
+  
+    }    
+  } 
+}  
+
+.loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    svg {
+      width: 2.5vmax;
+      height: 2.5vmax;
+    }
+  } 
+  
+  @media screen and (min-width: 1300px) {
+    .selectInput {
+    
+      .inputWrapper {
+        .htmInput {
+          width: 100%;
+          padding: .4vmax 3vmax .4vmax 1vmax;
+          font-size: .8vmax;
+        }
+    
+        .clearBtn {
+          width: 2vmax;
+          height: 2vmax;
+          font-size: 1.2vmax;
+        }
+        
+        .loading {
+          width: 1.9vmax;
+          height: 1.9vmax;
+        }     
+      }
+
+      .window {
+        padding: 1vmax;
+        width: 54vw;
+        left: 50%;
+        margin-left: -27vw;
+        height: 84vh;
+        top: 50%;
+        margin-top: -42vh;
+    
+        .header {
+          margin-bottom: 1vmax;
+        }
+    
+        .tableHead {
+          min-height: 4vmax;
+          margin-left: .1vmax;
+          margin-right: .1vmax;
+          margin-top: 1vmax;
+          padding: .1vmax;
+          
+    
+          div {
+            padding: .5vmax;
+            font-weight: 700;
+            height: 3vmax;
+          }
+    
+          .headCheck{
+            width: 4vmax;
+    
+            .checklAll {
+              width: 1.2vmax;
+              height: 1.2vmax;
+            }
+          }
+          .headCode{
+            min-width: 3vmax;
+            max-width: 85%;
+          }
+          .headName{
+            min-width: 3vmax;
+            max-width: 95%;
+          }      
+        }
+        .main {
+          padding: .1vmax;
+          // padding-top: .3vmax;
+          padding-bottom: .5vmax;
+          margin-top: .2vmax;
+          margin-bottom: 1vmax;
+          
+          .allAllsArea {
+            padding: .1vmax;
+            padding-right: 2vmax;
+            margin-bottom: .3vmax;
+            margin-right: .5vmax;
+            padding: .1vmax;
+    
+            button {
+              padding-right: 1vmax;
+              font-weight:700;
+              min-height: 2vmax;
+            }
+    
+            .infoArea {
+              right: 1vmax;
+              top: 1vmax;
+
+              .showInfoBtn {
+                width: 2vmax;
+                height: 2vmax;
+                border-radius: 1vmax; 
+                font-size: 1.5vmax;
+              }          
+            }       
+          }
+    
+    
+        }
+
+        .footer {button {
+            width: 25%;
+            min-height: 20px;
+            height: 2.5vmax;
+            margin-bottom: .3vmax;
+            border: .1vmax solid gray;
+            border-radius: .1vmax;
+          }      
+        }    
+      }
+    } 
+  }
+  
+  
+  @media screen and (max-width: 1000px) {
+  
+  }

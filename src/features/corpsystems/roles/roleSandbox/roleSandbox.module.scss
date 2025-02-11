@@ -1,0 +1,227 @@
+.roleSandbox {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  // background-color: transparent;
+  animation: appearance 300ms ease-in-out forwards;
+  z-index: 999;
+
+  backdrop-filter: blur(.2vmax);
+
+  .oneRoleSandbox {
+    width: 75%;
+    height: 85%;
+    margin: auto;
+    background-color: rgb(251, 254, 255);
+    display: flex;
+    flex-direction: column;
+    .roleData {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: .5vmax;
+
+      .searchBlank {
+        width: 100%;
+        height: 2.7vmax;
+      }
+      .searhResult {
+        margin-top: 1vmax;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        align-items:stretch;
+        padding: .5vmax;
+        
+        // 
+        .serchItem {
+          display: flex;
+          
+          button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 1vmax .5vmax;
+            background-color: transparent;
+            outline: .1vmax solid transparent;
+            transition: background-color .3s;
+
+            .label {
+              color: #2aadff;;
+              text-align: left;
+              overflow: hidden;
+              margin-right: 1vmax;
+              white-space: nowrap;
+            }
+            .name {
+              text-align: left;
+              flex-grow: 1;
+            }
+            .code {
+              color: rgb(146, 146, 146);
+            }
+
+            &:hover,
+            &:focus {
+              .label {
+                color: #0183d4;
+              }
+              background-color: lightskyblue;
+            }                            
+          }
+        }
+      }
+
+      .gapRow {
+        margin-top: .2vmax;
+      }
+
+    }
+    .control {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1vmax;
+
+      button {
+        width: 35%;
+        min-height: 20px;
+        height: 3vmax;
+        background-color: transparent;
+        border: .1vmax solid grey;
+        border-radius: .3vmax;
+        color: #161619;
+        transition: background-color .3s, border .3s;
+
+        &:hover,
+        &:focus {
+          border: .1vmax solid lightblue;
+          background-color: lightskyblue;
+        }
+      }
+    }
+
+    outline: 1px solid grey;
+  }
+
+
+  //
+  // Dark styles
+  //
+  &.dark {
+    // background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.267);
+    .oneRoleSandbox {
+      background-color: #161619f8;
+      .control {
+        button {
+          background-color: transparent;
+          border: .1vmax solid grey;
+          color: wheat;
+
+          &:hover,
+          &:focus {
+            background-color: #60606d;
+          }
+        }
+      }
+
+      .roleData {
+        .searhResult {
+          .serchItem {
+
+            .label {
+              // color: wheat;
+            }
+            .name {
+              color: white
+            }
+            button {
+              .label {
+                color: gray;
+              }
+              .code {
+                color: rgb(192, 191, 191);
+              }              
+              &:hover,
+              &:focus {
+                // outline: .1vmax solid grey;
+                background-color: #60606d;
+              }
+            }
+          }
+        }  
+      }        
+
+      outline: .1vmax solid grey;
+    }
+  }
+
+  @keyframes appearance {
+    0% {
+      opacity: .3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1300px) {
+  .roleSandbox {
+  
+    .oneRoleSandbox {
+      width: 55%;
+      height: 85%;
+      .roleData {
+        padding: .5vmax;
+  
+        .searchBlank {
+          height: 2.7vmax;
+        }
+        .searhResult {
+          margin-top: 1vmax;
+          padding: .5vmax;
+          
+          // 
+          .serchItem {
+            button {
+              padding: 1vmax .5vmax;
+  
+              .label {
+                margin-right: 1vmax;
+              }                           
+            }
+          }
+        }
+  
+        .gapRow {
+          margin-top: .1vmax;
+        }
+  
+      }
+      .control {
+        padding: 1vmax;
+  
+        button {
+          width: 35%;
+          min-height: 20px;
+          height: 2.5vmax;
+          border: .1vmax solid;
+          border-radius: .1vmax;
+
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}

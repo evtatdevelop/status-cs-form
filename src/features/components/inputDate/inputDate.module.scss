@@ -1,0 +1,184 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  // margin-left: .5vmax;
+  // margin-right: .5vmax;
+
+  
+  .date {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  
+    .htmInput {
+      width: 100%;
+      padding: .7vmax 3vmax .7vmax 1vmax;
+      font: inherit;
+      letter-spacing: .01vmax;
+      font-size: inherit;
+      font-weight: 400;
+      font-size: 1vmax;
+      // color: #424242;
+      
+    color: #424242;
+      border-bottom: .1vmax solid #42424279;
+      // border-radius: .1vmax;
+      background-color: transparent;
+      transition: background-color 1s;
+      
+      &:focus {
+        outline: none;
+        color: navy;
+        background-color: rgba(135, 206, 250, 0.5);
+      }
+    }
+  
+    .clearBtn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+      width: 2vmax;
+      height: 2vmax;
+      color: gray;
+      transition: color .3s;
+      font-size: 1.7vmax;
+      font-weight: 100;
+      opacity: 0;
+      transition: opacity .3s;
+      border-radius: .1vmax;
+
+      &.showClnBtn {
+        opacity: 1;
+      }
+  
+      &:focus,
+      &:hover {
+        color: red;
+        color: coral;
+      } 
+    }
+  }
+
+  .datePickerWrapper {
+    // top: 44px;
+    top: 2.8vmax;
+    position: absolute;
+    z-index: 99;
+    transition: opacity .3s, max-height .5s;
+    // overflow: hidden;
+    
+    &.hidePicker {
+      max-height: 0px;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &.showPicker {
+      max-height: 3.5vmax;
+      opacity: 1;
+    }
+    
+    // .pickerControl {
+    //   position: absolute;
+    //   right: -20px;
+    //   top: 00px;
+    //   z-index: 100;
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+
+    //   .pickerCloser {
+    //     // position: absolute;
+    //     // right: -20px;
+    //     // top: 00px;
+    //     // z-index: 100;
+    //     border: none;
+    //     padding: 0;
+    //     margin: 0;
+    //     background-color: transparent;
+    //     color: rgb(241, 235, 235);
+    //     font-size: 24px;
+    //     font-weight: 100;
+    //     transition: opacity 1s;
+    //     &:focus,
+    //     &:hover {
+    //       color: red;
+    //     }
+    //     &.hidePickerCloser {
+    //       opacity: 0;
+    //     }
+    
+    //     &.showPickerCloser {
+    //       opacity: 1;
+    //     }
+    //   }
+      
+    // }
+
+
+  }
+
+  //
+  // Dark styles
+  //
+  &.dark {
+    .date {
+      .htmInput {
+        color: rgb(170, 169, 169);
+
+        &:focus {
+          color: rgb(207, 207, 229);
+          background-color: rgba(0, 0, 128, 0.036);
+        }
+      }
+      .clearBtn {
+        background-color: transparent;
+        color: gray;
+    
+        &:focus,
+        &:hover {
+          color: red;
+          color: coral;
+        } 
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .calendar {
+    .date {
+      .htmInput {
+        font-size: .8vmax;
+      }
+    
+      .clearBtn {
+        width: 2vmax;
+        height: 2vmax;
+        font-size: 1.2vmax;
+      }
+    }
+  
+    .datePickerWrapper {
+      top: 2.5vmax;
+  
+      &.showPicker {
+        max-height: 3.5vmax;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}

@@ -1,0 +1,52 @@
+.checkBox {
+  display: flex;
+  width: 1.5vmax;
+  height: 1.5vmax;
+  justify-content: center;
+  align-items: center;
+
+  .faCheck {
+    color: #2aadff;
+    animation: appearance 300ms ease-in-out forwards;
+  }
+
+  outline: .1vmax solid grey;
+
+  @keyframes appearance {
+    0% {
+      opacity: .3;
+    }
+    80% {
+    }
+    100% {
+      opacity: .9;
+    }
+  }
+
+  //
+  // Dark styles
+  //
+  &.dark {
+    .faCheck {
+      color: lightgreen;
+      animation: appearance 300ms ease-in-out forwards;
+    }
+  
+    outline: .1vmax solid grey;
+  }  
+}
+
+@media screen and (min-width: 1300px) {
+  .checkBox {
+    display: flex;
+    width: 1.2vmax;
+    height: 1.2vmax;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}

@@ -1,0 +1,53 @@
+.infoField {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  .field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .7vmax 3vmax .7vmax 1vmax;
+    font: inherit;
+    font-weight: 400;
+    font-size: 1vmax;
+    letter-spacing: .01vmax;
+    color: #424242;
+    border-bottom: .1vmax solid #42424279;
+    // border-radius: .1vmax;
+
+    &.readonly {
+      background-color: #f3eeee;
+    }
+
+  }
+
+  &.dark {
+    .field {
+      color: rgb(170, 169, 169);
+
+      &.readonly {
+        background-color: grey;
+      }
+    }    
+  }  
+}
+
+@media screen and (min-width: 1300px) {
+  .infoField {
+  
+    .field {
+      padding: .4vmax 3vmax .4vmax 1vmax;
+      font: inherit;
+      font-weight: 400;
+      font-size: .8vmax;
+  
+    } 
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+}

@@ -1,0 +1,242 @@
+{
+  "application": {
+    "EN": "application",
+    "RU": "автоматизированная система",
+    "ZH": "应用"
+  },
+  "management_system": {
+    "EN": "management system",
+    "RU": "управления заявками",
+    "ZH": "管理系统"
+  },
+  "page_timeout_exceeded": {
+    "EN": "Page idle timeout exceeded",
+    "RU": "Превышено время бездействия на странице",
+    "ZH": "页面空闲时间超出"
+  },
+  "continue_work": {
+    "EN": "Continue work",
+    "RU": "Продолжить работу",
+    "ZH": "继续工作"
+  },
+  "ams_order_form": {
+    "EN": "Application Management System",
+    "RU": "Автоматизированная система управления заявками (АСУЗ)",
+    "ZH": "应用管理系统"
+  },
+  "application_for_access_to": {
+    "EN": "access and permissions for",
+    "RU": "доступ и разрешения для",
+    "ZH": "访问和权限"
+  },
+  "applicant": {
+    "EN": "Applicant",
+    "RU": "Инициатор запроса",
+    "ZH": "申请人"
+  },
+  "userName": {
+    "EN": "User",
+    "RU": "Пользователь",
+    "ZH": "用户"
+  },
+  "userNameOlaceholder": {
+    "EN": "Full name",
+    "RU": "Ф.И.О.",
+    "ZH": "全名"
+  },
+  "email": {
+    "EN": "Email",
+    "RU": "Эл. почта",
+    "ZH": "电子邮件"
+  },
+  "ad_account": {
+    "EN": "AD account",
+    "RU": "Учетная запись в AD",
+    "ZH": "活动目录账户"
+  },
+  "company": {
+    "EN": "Company",
+    "RU": "Компания",
+    "ZH": "公司"
+  },
+  "branch": {
+    "EN": "Branch",
+    "RU": "Филиал / ПЕ",
+    "ZH": "公司分公司"
+  },
+  "department": {
+    "EN": "Department",
+    "RU": "Подразделение",
+    "ZH": "部门"
+  },
+  "position": {
+    "EN": "Position",
+    "RU": "Должность",
+    "ZH": "员工岗位"
+  },
+  "location": {
+    "EN": "Location",
+    "RU": "Местонахождение",
+    "ZH": "员工所在地"
+  },
+  "sap_branch": {
+    "EN": "SAP Branch",
+    "RU": "Филиал SAP",
+    "ZH": "SAP分公司"
+  },
+  "user_boss": {
+    "EN": "User's immediate manager",
+    "RU": "Руководителя пользователя",
+    "ZH": "用户的直接主管"
+  },
+  "system": {
+    "EN": "System",
+    "RU": "Система",
+    "ZH": "系统"
+  },
+  "subsystem": {
+    "EN": "Subsystem",
+    "RU": "Подсистема",
+    "ZH": "子系统"
+  },
+  "roles": {
+    "EN": "Roles",
+    "RU": "Роли",
+    "ZH": "角色"
+  },
+  "add_role": {
+    "EN": "Add role",
+    "RU": "Добавить роль",
+    "ZH": "添加角色"
+  },
+  "nameRole": {
+    "EN": "Role",
+    "RU": "Роль",
+    "ZH": "角色"
+  },
+  "nameProcessGroup": {
+    "EN": "Process group",
+    "RU": "Группа процессов",
+    "ZH": "进程组"
+  },
+  "search": {
+    "EN": "Search",
+    "RU": "Поиск",
+    "ZH": "搜索"
+  },
+  "save": {
+    "EN": "Save",
+    "RU": "Сохранить",
+    "ZH": "节省"
+  },
+  "cancel": {
+    "EN": "Cancel",
+    "RU": "Отмена",
+    "ZH": "取消"
+  },
+  "request_route_approval": {
+    "EN": "Form a consideration route",
+    "RU": "Cформировать маршрут согласования",
+    "ZH": "形成考虑路线"
+  },
+  "other_options": {
+    "EN": "All other values",
+    "RU": "Все остальные значения",
+    "ZH": "所有其他值"
+  },
+  "code": {
+    "EN": "Role ID",
+    "RU": "Код",
+    "ZH": "參數程式碼"
+  },
+  "value": {
+    "EN": "Value",
+    "RU": "Значение",
+    "ZH": "參數值"
+  },
+  "from": {
+    "EN": "from",
+    "RU": "с",
+    "ZH": "从"
+  },
+  "to": {
+    "EN": "to",
+    "RU": "по",
+    "ZH": "到"
+  },
+  "no_limit": {
+    "EN": "No Limit",
+    "RU": "Без ограничений",
+    "ZH": "无限制"
+  },
+  "comment": {
+    "EN": "Comment",
+    "RU": "Комментарий",
+    "ZH": "评论"
+  },
+  "necessary_approvals": {
+    "EN": "Necessary approvals",
+    "RU": "Необходимые согласования",
+    "ZH": "必要的批准"
+  },
+  "stage": {
+    "EN": "Stage",
+    "RU": "Этап",
+    "ZH": "阶段"
+  },
+  "org_level": {
+    "EN": "Org. level",
+    "RU": "Орг. уровень",
+    "ZH": "组织级别"
+  },
+  "approver_s": {
+    "EN": "Approver(s)",
+    "RU": "Согласующий(ие)",
+    "ZH": "审批人"
+  },
+  "choice_possible": {
+    "EN": "Choice is possible",
+    "RU": "Возможен выбор",
+    "ZH": "您可以选择"
+  },
+  "submit_approval": {
+    "EN": "Submit for approval",
+    "RU": "Отправить на утверждение",
+    "ZH": "提交审批"
+  },
+  "no_data": {
+    "EN": "No data",
+    "RU": "Нет данных",
+    "ZH": "没有数据"
+  },
+  "request_number": {
+    "EN": "Request number",
+    "RU": "Номер запроса",
+    "ZH": "请求编号"
+  },
+  "date_creation": {
+    "EN": "Date of creation",
+    "RU": "Дата создания",
+    "ZH": "创建日期"
+  },
+  "request_status": {
+    "EN": "Request status",
+    "RU": "Статус запроса",
+    "ZH": "请求状态"
+  },
+  "asked_access_permissions": {
+    "EN": "Requested access permissions",
+    "RU": "Запрошенные разрешения",
+    "ZH": "请求的访问权限"
+  },
+  "role_valid": {
+    "EN": "Role valid",
+    "RU": "Срок действия",
+    "ZH": "角色有效期"
+  },
+  "information": {
+    "EN": "Information",
+    "RU": "Информация",
+    "ZH": "信息"
+  }
+}
