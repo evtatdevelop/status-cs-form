@@ -11,7 +11,7 @@ import { corpSyst, getSessionKey, getCorpsystem, userData,
   setBoss, clearForm, getSystemList, processGroupListData, roleListData, rolesData, } from "./corpsystemsSlice";
 import { changeTheme } from "../main/mainpageSlice";
 import { UserData } from "../userData/userData";
-import { Row } from "../components/row/row";
+// import { Row } from "../components/row/row";
 import { SelectInput } from "../components/selectInput/selectInput";
 import { Systems } from "./systems/systems";
 import { Roles } from "./roles/roles";

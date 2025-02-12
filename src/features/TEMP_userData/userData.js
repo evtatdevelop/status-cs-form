@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, } from "react";
 import styles from './userData.module.scss';
 import { useSelector, useDispatch } from "react-redux";
 import { user } from '../user/userSlice';
@@ -6,7 +6,7 @@ import dictionary from '../../dictionary.json';
 import { getUserId, userDataLoading, userData, 
   getCompanies, companyListData, setCompany, getBranches, branchListData, locationLiistData, positionInputData,
   getDepartments, departmentLiistData, setBranch, setDepartment, getSapBranch, getLocations, setLocation, setPosition,
-  unSetSapBranch, unsetDepartmentList, unsetBrancList, unsetCompanyList, unsetLocationList, unSetPosition, clearForm, clearApprovals, hintsData } from "../corpsystems/corpsystemsSlice";
+  unSetSapBranch, unsetDepartmentList, unsetBrancList, unsetCompanyList, unsetLocationList, unSetPosition, clearForm, clearApprovals, } from "../corpsystems/corpsystemsSlice";
 import { Row } from "../components/row/row";
 import { SelectInput } from "../components/selectInput/selectInput";
 import { UserDataLoader } from "./userDataLoader";
@@ -17,7 +17,7 @@ import SelectTree from "../components/selectTree/selectTree";
 import { darkTheme } from "../main/mainpageSlice";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faXmark, } from '@fortawesome/free-solid-svg-icons'
-import { Hint } from "../components/hint/hint";
+// import { Hint } from "../components/hint/hint";
 import { RowHint } from "../components/rowHint/rowHint";
 
 export const UserData = props => {
@@ -151,7 +151,7 @@ export const UserData = props => {
     : `${styles.userData}`
 
   
-  const [showHint, setShowHint] = useState(null); 
+  // const [showHint, setShowHint] = useState(null); 
 
   return (
     <div className={userDataStyle}>

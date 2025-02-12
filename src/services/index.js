@@ -6,7 +6,8 @@ export default class Service {
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
         'API-Key': data.api_key
-      }
+      },
+      // mode: 'no-cors'
     });
     if (!res.ok) throw new Error(`Could non fetch ${url}. Status: ${res.status}`);
     return await res.json();   

@@ -15,7 +15,7 @@ export const Roles = () => {
   const dark = useSelector(darkTheme);
   const roleAdder = useSelector(roleAdderData);
 
-  const {role_buttons_name, role_name, only_one_role} = useSelector(paramsData);
+  const {role_name, only_one_role} = useSelector(paramsData);
   //! role_buttons_name 
 
   let rolesStyle = dark 

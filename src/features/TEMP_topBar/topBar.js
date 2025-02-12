@@ -5,7 +5,7 @@ import { user, loading } from '../user/userSlice';
 import { LangButton } from "../components/langButton/langButton";
 import dictionary from '../../dictionary.json';
 import { ThemeButton } from "../components/themeButton/themeButton";
-import { darkTheme } from "../main/mainpageSlice";
+import { darkTheme } from "../TEMP_main/mainpageSlice";
 import { Link, useLocation  } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, } from '@fortawesome/free-solid-svg-icons'

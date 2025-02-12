@@ -3,7 +3,7 @@ import styles from './themeButton.module.scss';
 import darkStiles from './darkThemeButton.module.scss';
 import { useSelector, useDispatch } from "react-redux";
 // import { user } from "../../user/userSlice";
-import { darkTheme, changeTheme } from "../../main/mainpageSlice";
+import { darkTheme, changeTheme } from "../../TEMP_main/mainpageSlice";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 

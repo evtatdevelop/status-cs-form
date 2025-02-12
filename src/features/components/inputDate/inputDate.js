@@ -24,6 +24,7 @@ export const InputDate = props => {
       setJsDate(val);
       setValue( getLocalDate(val) )
     }
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    },[val])
 
   const getLocalDate = date => {
