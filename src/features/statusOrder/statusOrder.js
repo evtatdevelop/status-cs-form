@@ -23,7 +23,7 @@ export const StatusOrder = () => {
     <section className={styles.statusOrder} >
       { !loadingData
         ? <>
-            <h1>{id ? `Status Order: ${id}` : 'Application ID required' }</h1>
+            <h1 className={styles.interfaceColor}>АВТОМАТИЗИРОВАННАЯ СИСТЕМА УПРАВЛЕНИЯ ЗАЯВКАМИ (АСУЗ)</h1>
             { order?.main?.asz31_id
               ? <p>{`OrderID: ${order.main.asz31_id}`}</p>
               : null

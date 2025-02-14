@@ -21,9 +21,7 @@ export const orderSlice = createSlice({
       .addCase(getOrderData.fulfilled, ( state, action ) => {
         state.loading = false;
         state.data = action.payload;
-        // console.log(action.payload);
       });
-
   }
 });
 
