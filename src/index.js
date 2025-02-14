@@ -5,7 +5,8 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import ErrorBoundry from './features/errorBoundry';
-import { BrowserRouter, HashRouter  } from 'react-router';
+// import { BrowserRouter } from 'react-router';
+import { HashRouter  } from 'react-router';
 import './rest.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
