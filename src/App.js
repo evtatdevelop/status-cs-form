@@ -1,22 +1,25 @@
 import styles from './App.module.scss';
 // import { useEffect,  } from 'react';
-// import { useSelector, } from "react-redux";
-// import { useDispatch } from "react-redux";
-// import { loading, langLoading, getRemote } from './features/user/userSlice';
+// import { useSelector, useDispatch } from "react-redux";
+// import { loading, langLoading, getRemote, user } from './features/user/userSlice';
 import { Routes, Route } from 'react-router';
 // import { Loader } from './features/components/loader/loader';
 import { pathBase } from './config';
 // import { LoadPage } from './features/loadPage/loadPage';
-import { StatusOrder } from './features/statusOrder/statusOrder';
+import { StatusOrder, } from './features/statusOrder/statusOrder';
 
 function App() {
   // const load = useSelector(loading);
   // const langLoad = useSelector(langLoading);
+  // const userData = useSelector(user);
   // const dispatch = useDispatch();  
 
   // useEffect(() => { 
   //   dispatch(getRemote());
   // }, [dispatch, ]);
+
+  // console.log('userData: ', userData);
+
 
   return (
     // expired 
@@ -25,7 +28,7 @@ function App() {
     // load
     //   ? <LoadPage/>
     //   : 
-      <div className={styles.app}>
+        <div className={styles.app}>
           <Routes>
             <Route path={`/`} > 
               <Route path={`${pathBase}/`} element={<div>No order is selected.</div>}/>

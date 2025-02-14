@@ -1,18 +1,36 @@
+import { useEffect,  } from 'react';
 import styles from './statusOrder.module.scss';
 import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { orderData, getOrderData, loading } from '../order/orderSlice';
+import { Loader } from '../components/loader/loader';
 
 export const StatusOrder = () => {
 
   const { id } = useParams();
+  const order = useSelector(orderData);
+  const loadingData = useSelector(loading);
+  const dispatch = useDispatch(); 
 
-  // useEffect(() => {
-  //   dispatch(getOrder( {'api_key': api_key, 'order_type': system, 'order_id': id, } ));
-  //   dispatch(cleanSentStatusPage())
-  // }, []);
+  useEffect(() => {
+    dispatch(getOrderData( {'order_type': 'corpsystems', 'id': id, } ));
+  }, [dispatch, id]);
+
+  console.log('order: ',order);
+  
   
   return (
     <section className={styles.statusOrder} >
-      <h1>{id ? `Status Order: ${id}` : 'Application ID required' }</h1>
+      { !loadingData
+        ? <>
+            <h1>{id ? `Status Order: ${id}` : 'Application ID required' }</h1>
+            { order?.main?.asz31_id
+              ? <p>{`OrderID: ${order.main.asz31_id}`}</p>
+              : null
+            }        
+          </>
+        : <Loader/>
+      }
     </section>    
   )
 }
