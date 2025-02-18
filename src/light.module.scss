@@ -1,6 +1,6 @@
 :root {
   --app-bg-light: #c6c6c6;
-  --app-cl-light: #424242;
+  --app-clr-light: #424242;
   --status-border-light: #e6e6e6;
   --status-bg-light: white;
 
@@ -9,11 +9,11 @@
 
 .app {
   background-color: var(--app-bg-light);
-  color: var(--app-cl-light);
+  color: var(--app-clr-light);
 }
 
 .statusOrder {
-  border: 10px solid var(--status-border-light);
+  border-color: var(--status-border-light);
   background-color: var(--status-bg-light);
 
   h1 {

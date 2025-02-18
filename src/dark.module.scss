@@ -13,7 +13,7 @@
 }
 
 .statusOrder {
-  border: 10px solid var(--status-border-dark);
+  border-color: var(--status-border-dark);
   background-color: var(--status-bg-dark);
 
   h1 {

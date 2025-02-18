@@ -35,7 +35,7 @@ export const StatusOrder = () => {
       <Header/>
       { !loadingData
         ? <div className={styles.main}>
-            <h1 className={styles.interfaceColor}>{dictionary.ams_order_form[user.lang]}</h1>
+            <h1>{dictionary.ams_order_form[user.lang]}</h1>
             { order?.main?.asz31_id
               ? <p>{`OrderID: ${order.main.asz31_id}`}</p>
               : null
