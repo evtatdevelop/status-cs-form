@@ -26,15 +26,13 @@ export const userSlice = createSlice({
       .addCase(setLang.pending, ( state ) => { state.langLoading = true })
       .addCase(setLang.fulfilled, ( state, action ) => {
         state.data.lang = action.payload;
-        // state.data.lang = 'ZH';
         state.langLoading = false;
       })
-
   }
 });
 
 export const loading      = ( state ) => state.user.loading;
 export const langLoading  = ( state ) => state.user.langLoading;
-export const user         = ( state ) => state.user.data;
+export const remoteUser   = ( state ) => state.user.data;
 
 export default userSlice.reducer;

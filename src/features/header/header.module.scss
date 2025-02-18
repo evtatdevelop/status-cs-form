@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  padding: 5px 0;
+  margin-bottom: 30px;
+
+  & > a {
+    flex-grow: 1;
+  }
+}

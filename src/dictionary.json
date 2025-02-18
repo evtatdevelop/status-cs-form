@@ -1,4 +1,15 @@
 {
+  "ams_order_form": {
+    "EN": "Application Management System",
+    "RU": "Автоматизированная система управления заявками (АСУЗ)",
+    "ZH": "应用管理系统"
+  },
+  "asuz_ortal": {
+    "EN": "ASUZ Portal",
+    "RU": "Портал АСУЗ",
+    "ZH": "ASUZ 网络门户"
+  },
+
   "application": {
     "EN": "application",
     "RU": "автоматизированная система",
@@ -19,11 +30,7 @@
     "RU": "Продолжить работу",
     "ZH": "继续工作"
   },
-  "ams_order_form": {
-    "EN": "Application Management System",
-    "RU": "Автоматизированная система управления заявками (АСУЗ)",
-    "ZH": "应用管理系统"
-  },
+
   "application_for_access_to": {
     "EN": "access and permissions for",
     "RU": "доступ и разрешения для",

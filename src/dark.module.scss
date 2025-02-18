@@ -1,0 +1,31 @@
+:root {
+  --app-bg-dark: #161619;
+  --app-clr-dark: #cccccc;
+  --status-border-dark: #37373d;
+  --status-bg-dark: #1f1f1f;
+
+  --interface-clr-dark: wheat;
+}
+
+.app {
+  background-color: var(--app-bg-dark);
+  color: var(--app-clr-dark);
+}
+
+.statusOrder {
+  border: 10px solid var(--status-border-dark);
+  background-color: var(--status-bg-dark);
+
+  h1 {
+    color: var(--interface-clr-dark);
+  }
+  .interfaceColor {
+    color: var(--interface-clr-dark);
+  }
+}
+
+.header {
+  & > a {
+    color: var(--interface-clr-dark);
+  }
+}

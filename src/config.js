@@ -1,5 +1,5 @@
-const mode = 'local';
-// const mode = 'prod';
+// const mode = 'local';
+const mode = 'prod';
 
 export let apiBase;
 export let pathBase = '';

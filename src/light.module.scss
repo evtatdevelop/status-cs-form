@@ -1,0 +1,31 @@
+:root {
+  --app-bg-light: #c6c6c6;
+  --app-cl-light: #424242;
+  --status-border-light: #e6e6e6;
+  --status-bg-light: white;
+
+  --interface-clr-light: #f04e25;
+}
+
+.app {
+  background-color: var(--app-bg-light);
+  color: var(--app-cl-light);
+}
+
+.statusOrder {
+  border: 10px solid var(--status-border-light);
+  background-color: var(--status-bg-light);
+
+  h1 {
+    color: var(--interface-clr-light);
+  }
+  .interfaceColor {
+    color: var(--interface-clr-light);
+  }
+}
+
+.header {
+  & > a {
+    color: var(--interface-clr-light);
+  }
+}
