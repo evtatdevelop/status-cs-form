@@ -1,0 +1,12 @@
+.themeButton {
+  font-size: 1.1vmax;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 1200px) {
+  .themeButton {
+    font-size: 14px;
+  }
+}

@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   loading: false,
   darkTheme: false,
+  langMode: '',
 }
 
 export const appSlice = createSlice({
@@ -13,13 +14,18 @@ export const appSlice = createSlice({
     setTheme: (state, action) => {
       state.darkTheme = action.payload;
     },
+
+    setLangMode: (state, action) => {
+      state.langMode = action.payload;
+    },
   },
 
 });
 
-export const { setTheme } = appSlice.actions;
+export const { setTheme, setLangMode } = appSlice.actions;
 
 export const darkTheme = ( state ) => state.app.darkTheme;
+export const langMode = ( state ) => state.app.langMode;
 export const loading = ( state ) => state.app.loading;
 
 export default appSlice.reducer;

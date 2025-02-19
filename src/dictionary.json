@@ -9,6 +9,11 @@
     "RU": "Портал АСУЗ",
     "ZH": "ASUZ 网络门户"
   },
+  "request": {
+    "EN": "Request",
+    "RU": "Заявка",
+    "ZH": "请求"
+  },
 
   "application": {
     "EN": "application",

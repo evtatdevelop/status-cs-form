@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect,  } from 'react';
 import styles from './statusOrder.module.scss';
 import dark from '../../dark.module.scss';
@@ -6,25 +7,26 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { orderData, getOrderData, loading } from '../order/orderSlice';
 import { Loader } from '../components/loader/loader';
-import { darkTheme, } from '../../appSlice';
+import { darkTheme, langMode } from '../../appSlice';
 import { Header } from '../header/header';
 import dictionary from "../../dictionary.json";
-import { remoteUser } from '../user/userSlice';
+import { oredrType } from '../../config';
 
 export const StatusOrder = () => {
 
   const { id } = useParams();
   const order = useSelector(orderData);
   const loadingData = useSelector(loading);
-  const user = useSelector(remoteUser);
+  const lang = useSelector(langMode);
   const dispatch = useDispatch(); 
 
   useEffect(() => {
-    if ( !Object.keys(order).length ) dispatch(getOrderData( {'order_type': 'corpsystems', 'id': id, } ));
-  }, [dispatch, id, order]);
+    dispatch(getOrderData( {'order_type': oredrType, 'id': id, } ));
+  }, [lang]);
 
   
   console.log('order: ',order);
+  console.log('lang: ',lang);
   
   
   const darkMode = useSelector(darkTheme);
@@ -35,13 +37,12 @@ export const StatusOrder = () => {
       <Header/>
       { !loadingData
         ? <div className={styles.main}>
-            <h1>{dictionary.ams_order_form[user.lang]}</h1>
-            { order?.main?.asz31_id
-              ? <p>{`OrderID: ${order.main.asz31_id}`}</p>
-              : null
-            } 
-      
-          </div>
+              <h1>{dictionary.ams_order_form[lang]}</h1>
+              { order?.main?.asz31_id
+                ? <p>{`${dictionary.request[lang]} ${order.main.asz31_id}`}</p>
+                : null
+              } 
+            </div>
         : <Loader/>
       }
     </section>    

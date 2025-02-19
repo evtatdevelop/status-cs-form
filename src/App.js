@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect,  } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import styles from './App.module.scss';
@@ -6,16 +7,21 @@ import light from './light.module.scss'
 import { Routes, Route } from 'react-router';
 import { pathBase } from './config';
 import { StatusOrder, } from './features/statusOrder/statusOrder';
-import { darkTheme } from "./appSlice";
-import { getRemote, remoteUser } from "./features/user/userSlice";
+import { darkTheme, langMode, setLangMode } from "./appSlice";
+import { getRemote, remoteUser, } from "./features/user/userSlice";
 
 function App() {
   const dispatch = useDispatch(); 
   const user = useSelector(remoteUser);
+  const lang = useSelector(langMode);
   
   useEffect(() => {
-    if ( !Object.keys(user).length ) dispatch(getRemote());
-  }, [dispatch, user]);
+    dispatch(getRemote());
+  }, []);
+
+  useEffect(() => {
+    if (user?.lang && !lang) dispatch(setLangMode(user.lang));
+  }, [dispatch, user.lang]);
 
   
   console.log(user);

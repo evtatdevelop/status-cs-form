@@ -6,6 +6,7 @@
   padding: 0.6vmax 2.6vmax 2.6vmax 2.6vmax;
   border-style: solid;
   border-width: 1vmax;
+  animation: appearance 500ms ease-in-out forwards;
 
   .main {
     h1 {
@@ -38,5 +39,16 @@
         font-size: 18px;
       }
     }
+  }
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0.3;
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
   }
 }

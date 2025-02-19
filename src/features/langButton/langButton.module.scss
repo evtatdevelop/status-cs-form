@@ -1,0 +1,25 @@
+.langButton {
+  position: relative;
+  button {
+    font-size: 1.1vmax;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  div {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .langButton {
+    button {
+      font-size: 14px;
+    }
+  }
+}
