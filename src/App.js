@@ -7,7 +7,7 @@ import light from './light.module.scss'
 import { Routes, Route } from 'react-router';
 import { pathBase } from './config';
 import { StatusOrder, } from './features/statusOrder/statusOrder';
-import { darkTheme, langMode, setLangMode } from "./appSlice";
+import { darkTheme, langMode, setLangMode, setTheme } from "./appSlice";
 import { getRemote, remoteUser, } from "./features/user/userSlice";
 
 function App() {
@@ -15,6 +15,10 @@ function App() {
   const user = useSelector(remoteUser);
   const lang = useSelector(langMode);
   
+  useEffect(() => {
+    dispatch(setTheme( false || JSON.parse(localStorage.getItem('darkTheme')) ));
+  }, []);
+
   useEffect(() => {
     dispatch(getRemote());
   }, []);

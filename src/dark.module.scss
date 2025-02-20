@@ -16,12 +16,17 @@
   border-color: var(--status-border-dark);
   background-color: var(--status-bg-dark);
 
-  h1 {
+  h1,
+  h2 {
     color: var(--interface-clr-dark);
   }
   .interfaceColor {
     color: var(--interface-clr-dark);
   }
+}
+
+.numOrder {
+  color: var(--interface-clr-dark);
 }
 
 .header {

@@ -15,7 +15,7 @@ export const Header = () => {
   
   return (
     <section className={styleHeader} >
-      <a href='https://asuz.digtp.com/'>{dictionary.asuz_ortal[lang]}</a>
+      <a href='https://asuz.digtp.com/'>{dictionary.asuz_portal[lang]}</a>
       <div>
         <ThemeButton/>
         <LangButton/>       

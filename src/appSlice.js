@@ -13,6 +13,7 @@ export const appSlice = createSlice({
 
     setTheme: (state, action) => {
       state.darkTheme = action.payload;
+      localStorage.setItem(`darkTheme`, JSON.stringify(action.payload));
     },
 
     setLangMode: (state, action) => {

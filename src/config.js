@@ -8,6 +8,6 @@ switch ( mode ) {
   case 'prod':    apiBase = `https://${window.location.hostname}/api`; break;
   default:        apiBase = 'https://asuz.digtp.com/api_tst';
 }
-export const oredrType = 'corpsystems';
-// export const oredrType = 'workplace';
-// export const oredrType = 'resource';
+export let oredrType = 'corpsystems';
+// oredrType = 'workplace';
+// oredrType = 'resource';

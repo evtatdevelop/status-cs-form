@@ -4,7 +4,7 @@
     "RU": "Автоматизированная система управления заявками (АСУЗ)",
     "ZH": "应用管理系统"
   },
-  "asuz_ortal": {
+  "asuz_portal": {
     "EN": "ASUZ Portal",
     "RU": "Портал АСУЗ",
     "ZH": "ASUZ 网络门户"
@@ -13,6 +13,36 @@
     "EN": "Request",
     "RU": "Заявка",
     "ZH": "请求"
+  },
+  "request_number": {
+    "EN": "Request number",
+    "RU": "Номер запроса",
+    "ZH": "请求编号"
+  },
+  "date_creation": {
+    "EN": "Date of creation",
+    "RU": "Дата создания",
+    "ZH": "创建日期"
+  },
+  "closing_date": {
+    "EN": "Closing date",
+    "RU": "Дата закрытия",
+    "ZH": "截止日期"
+  },
+  "request_status": {
+    "EN": "Request status",
+    "RU": "Статус запроса",
+    "ZH": "请求状态"
+  },
+  "applicant": {
+    "EN": "Applicant",
+    "RU": "Инициатор запроса",
+    "ZH": "申请人"
+  },
+  "requested_employee": {
+    "EN": "The employee it is requested for access / privileges",
+    "RU": "Сотрудник для которого запрошен доступ / полномочия",
+    "ZH": "被请求访问/特权的员工"
   },
 
   "application": {
@@ -40,11 +70,6 @@
     "EN": "access and permissions for",
     "RU": "доступ и разрешения для",
     "ZH": "访问和权限"
-  },
-  "applicant": {
-    "EN": "Applicant",
-    "RU": "Инициатор запроса",
-    "ZH": "申请人"
   },
   "userName": {
     "EN": "User",
@@ -220,21 +245,6 @@
     "EN": "No data",
     "RU": "Нет данных",
     "ZH": "没有数据"
-  },
-  "request_number": {
-    "EN": "Request number",
-    "RU": "Номер запроса",
-    "ZH": "请求编号"
-  },
-  "date_creation": {
-    "EN": "Date of creation",
-    "RU": "Дата создания",
-    "ZH": "创建日期"
-  },
-  "request_status": {
-    "EN": "Request status",
-    "RU": "Статус запроса",
-    "ZH": "请求状态"
   },
   "asked_access_permissions": {
     "EN": "Requested access permissions",
