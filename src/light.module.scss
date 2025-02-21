@@ -16,11 +16,9 @@
   border-color: var(--status-border-light);
   background-color: var(--status-bg-light);
 
-  h1,
-  h2 {
-    color: var(--interface-clr-light);
-  }
-  .interfaceColor {
+  & > h1,
+  & > h2,
+  & > h3 {
     color: var(--interface-clr-light);
   }
 }

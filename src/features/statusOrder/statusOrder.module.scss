@@ -8,21 +8,23 @@
   border-width: 1vmax;
   animation: appearance 500ms ease-in-out forwards;
 
-  .main {
-    h1,
-    h2 {
-      text-align: center;
-      font-size: 2vmax;
-      text-transform: uppercase;
-      letter-spacing: 0.17vmax;
-    }
+  & > h1,
+  & > h2 {
+    text-align: center;
+    font-size: 2vmax;
+    text-transform: uppercase;
+    letter-spacing: 0.17vmax;
+  }
 
-    h2 {
-      margin-bottom: 2.5vmax;
-    }
+  & > h2 {
+    margin-bottom: 2.5vmax;
+  }
 
-    p {
-      font-size: 1.5vmax;
+  & > h3 {
+    font-size: 1.7vmax;
+    margin-bottom: 2.5vmax;
+    span {
+      font-weight: 700;
     }
   }
 }
@@ -34,20 +36,19 @@
     padding: 10px 30px 30px 30px;
     border-width: 10px;
 
-    .main {
-      h1,
-      h2 {
-        font-size: 24px;
-        letter-spacing: 2px;
-      }
+    h1,
+    h2 {
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
 
-      h2 {
-        margin-bottom: 30px;
-      }
+    h2 {
+      margin-bottom: 30px;
+    }
 
-      p {
-        font-size: 18px;
-      }
+    h3 {
+      font-size: 20px;
+      margin-bottom: 30px;
     }
   }
 }

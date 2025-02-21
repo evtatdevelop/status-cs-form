@@ -45,6 +45,46 @@
     "ZH": "被请求访问/特权的员工"
   },
 
+
+  "status_complete": {
+    "EN": "complete",
+    "RU": "complete",
+    "ZH": "complete"
+  },
+  "status_rejected": {
+    "EN": "rejected",
+    "RU": "rejected",
+    "ZH": "rejected"
+  },
+  "status_timeout": {
+    "EN": "timeout",
+    "RU": "timeout",
+    "ZH": "timeout"
+  },
+  "status_errors": {
+    "EN": "errors",
+    "RU": "errors",
+    "ZH": "errors"
+  },
+  "status_initiator": {
+    "EN": "initiator",
+    "RU": "initiator",
+    "ZH": "initiator"
+  },
+  "status_created": {
+    "EN": "created",
+    "RU": "created",
+    "ZH": "created"
+  },
+  "status_inProgress": {
+    "EN": "in_progress",
+    "RU": "in_progress",
+    "ZH": "in_progress"
+  },
+
+
+
+
   "application": {
     "EN": "application",
     "RU": "автоматизированная система",

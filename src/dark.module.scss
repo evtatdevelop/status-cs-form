@@ -16,17 +16,11 @@
   border-color: var(--status-border-dark);
   background-color: var(--status-bg-dark);
 
-  h1,
-  h2 {
+  & > h1,
+  & > h2,
+  & > h3 {
     color: var(--interface-clr-dark);
   }
-  .interfaceColor {
-    color: var(--interface-clr-dark);
-  }
-}
-
-.numOrder {
-  color: var(--interface-clr-dark);
 }
 
 .header {
@@ -41,6 +35,12 @@
 
 .langButton {
   button {
+    color: var(--interface-clr-dark);
+  }
+}
+
+.orderData {
+  a {
     color: var(--interface-clr-dark);
   }
 }
