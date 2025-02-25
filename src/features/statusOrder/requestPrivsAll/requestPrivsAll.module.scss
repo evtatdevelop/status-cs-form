@@ -1,0 +1,69 @@
+.requestPrivsAll {
+  display: flex;
+  flex-direction: column;
+
+  .asked_accesses {
+    margin-top: 1vmax;
+    margin-bottom: 1vmax;
+  }
+
+  .askedPermissions {
+    display: grid;
+    border: 0.01vmax solid #42424236;
+    font-weight: 300;
+
+    .role {
+      display: grid;
+      border-collapse: collapse;
+      grid-template-columns: 40% auto;
+
+      .roleName {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0.5vmax;
+        border: 0.1vmax solid #42424236;
+      }
+      .tableHead {
+        font-weight: 700;
+        text-align: center;
+      }
+      .roleLevel {
+        display: grid;
+        grid-template-rows: auto;
+
+        .level {
+          display: grid;
+          grid-template-rows: auto;
+          grid-template-columns: 25% auto;
+
+          .levelName {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5vmax;
+            border: 0.1vmax solid #42424236;
+          }
+          .values {
+            display: flex;
+            flex-direction: column;
+            border: 0.1vmax solid #42424236;
+            padding: 0.5vmax;
+
+            .value {
+              span {
+                // color: rgb(173, 173, 173);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .requestPrivsAll {
+  }
+}

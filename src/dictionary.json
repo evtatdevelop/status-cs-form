@@ -44,46 +44,51 @@
     "RU": "Сотрудник для которого запрошен доступ / полномочия",
     "ZH": "被请求访问/特权的员工"
   },
-
-
   "status_complete": {
-    "EN": "complete",
-    "RU": "complete",
-    "ZH": "complete"
+    "EN": "approval completed",
+    "RU": "согласование завершено",
+    "ZH": "审批完成"
   },
   "status_rejected": {
     "EN": "rejected",
-    "RU": "rejected",
-    "ZH": "rejected"
+    "RU": "отклонено",
+    "ZH": "拒绝"
   },
   "status_timeout": {
-    "EN": "timeout",
-    "RU": "timeout",
-    "ZH": "timeout"
+    "EN": "canceled (approval timed out)",
+    "RU": "отменена (превышен срок согласования)",
+    "ZH": "已取消（批准超时"
   },
   "status_errors": {
-    "EN": "errors",
-    "RU": "errors",
-    "ZH": "errors"
+    "EN": "canceled (creation errors)",
+    "RU": "аннулирована (ошибки при создании)",
+    "ZH": "已取消（创建错误）"
   },
   "status_initiator": {
-    "EN": "initiator",
-    "RU": "initiator",
-    "ZH": "initiator"
+    "EN": "canceled by the initiator",
+    "RU": "отменена инициатором",
+    "ZH": "发起者取消"
   },
   "status_created": {
-    "EN": "created",
-    "RU": "created",
-    "ZH": "created"
+    "EN": "Created",
+    "RU": "Создана",
+    "ZH": "创建"
   },
   "status_inProgress": {
-    "EN": "in_progress",
-    "RU": "in_progress",
-    "ZH": "in_progress"
+    "EN": "approval is in progress",
+    "RU": "согласование",
+    "ZH": "审批正在进行中"
   },
-
-
-
+  "organizational_levels": {
+    "EN": "Organizational levels",
+    "RU": "согласование",
+    "ZH": "组织级别"
+  },
+  "role": {
+    "EN": "Role",
+    "RU": "Роль",
+    "ZH": "角色"
+  },
 
   "application": {
     "EN": "application",
@@ -105,7 +110,6 @@
     "RU": "Продолжить работу",
     "ZH": "继续工作"
   },
-
   "application_for_access_to": {
     "EN": "access and permissions for",
     "RU": "доступ и разрешения для",

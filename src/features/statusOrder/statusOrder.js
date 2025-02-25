@@ -13,6 +13,8 @@ import dictionary from "../../dictionary.json";
 import { oredrType } from '../../config';
 import { OrderData } from './orderData/orderData';
 import { langLoading } from '../user/userSlice';
+import { RequestPrivsAll } from './requestPrivsAll/requestPrivsAll';
+import { Agreements } from './agreements/agreements';
 
 export const StatusOrder = () => {
 
@@ -27,10 +29,8 @@ export const StatusOrder = () => {
     dispatch(getOrderData( {'order_type': oredrType, 'id': id, } ));
   }, []);
 
-  
   console.log('order: ',order);
   console.log('lang: ',lang);
-  
   
   const darkMode = useSelector(darkTheme);
   const styleStatusOrder = darkMode ? `${styles.statusOrder} ${dark.statusOrder}` : `${styles.statusOrder} ${light.statusOrder}`;
@@ -44,6 +44,8 @@ export const StatusOrder = () => {
             <h2>{order?.corp_system?.full_name_lang}</h2>
             <h3>{`${dictionary.request_number[lang]}`}: <span>{`${order?.main?.order_num}`}</span></h3>            
             <OrderData/>
+            <RequestPrivsAll/>
+            <Agreements/>
           </>
         : <Loader/>
       }

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './infoField.module.scss';
-import { darkTheme } from "../../main/mainpageSlice";
+import { darkTheme } from "../../../appSlice";
 import { useSelector } from "react-redux";
 
 export const InfoField = props => {
