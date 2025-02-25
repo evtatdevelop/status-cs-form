@@ -5,6 +5,9 @@
   --status-bg-dark: #1f1f1f;
 
   --interface-clr-dark: wheat;
+
+  --table-border-dark: #d6d6d6;
+  --table-head-bg-dark: #6e7f80;
 }
 
 .app {
@@ -42,5 +45,34 @@
 .orderData {
   a {
     color: var(--interface-clr-dark);
+  }
+}
+
+.requestPrivsAll {
+  & > ul {
+    border-top-color: #d6d6d6;
+    border-left-color: #d6d6d6;
+    border-bottom-color: #d6d6d6;
+
+    & > li {
+      & > label {
+        border-top-color: #d6d6d6;
+        border-right-color: #d6d6d6;
+      }
+      & > ul {
+        border-right-color: #d6d6d6;
+
+        & > li {
+          border-top-color: #d6d6d6;
+
+          & > label {
+            border-right-color: #d6d6d6;
+          }
+        }
+      }
+      &:first-child {
+        background-color: var(--table-head-bg-dark);
+      }
+    }
   }
 }

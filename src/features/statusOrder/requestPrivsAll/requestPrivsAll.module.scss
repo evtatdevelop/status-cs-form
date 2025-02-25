@@ -1,62 +1,83 @@
 .requestPrivsAll {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2.5vmax;
 
-  .asked_accesses {
-    margin-top: 1vmax;
+  .h3 {
     margin-bottom: 1vmax;
   }
 
-  .askedPermissions {
+  & > ul {
     display: grid;
-    border: 0.01vmax solid #42424236;
     font-weight: 300;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
 
-    .role {
+    // & :first-child {
+    //   li {
+    //     & > label {
+    //       font-weight: 700;
+    //       text-align: center;
+    //       padding: 0.5vmax;
+    //       border-right: 1px solid #d6d6d6;
+    //       background-color: #d6d6d6;
+    //     }
+    //   }
+    // }
+
+    & > li {
       display: grid;
       border-collapse: collapse;
       grid-template-columns: 40% auto;
 
-      .roleName {
+      & > label {
         width: 100%;
         display: flex;
         align-items: center;
         padding: 0.5vmax;
-        border: 0.1vmax solid #42424236;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-top-width: 1px;
+        border-right-width: 1px;
       }
-      .tableHead {
-        font-weight: 700;
-        text-align: center;
-      }
-      .roleLevel {
+
+      & > ul {
         display: grid;
         grid-template-rows: auto;
+        border-right-style: solid;
+        border-right-width: 1px;
 
-        .level {
+        & > li {
           display: grid;
           grid-template-rows: auto;
           grid-template-columns: 25% auto;
+          border-top-style: solid;
+          border-top-width: 1px;
 
-          .levelName {
+          & > label {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 0.5vmax;
-            border: 0.1vmax solid #42424236;
+            border-right-style: solid;
+            border-right-width: 1px;
           }
-          .values {
+          & > ul {
             display: flex;
             flex-direction: column;
-            border: 0.1vmax solid #42424236;
             padding: 0.5vmax;
-
-            .value {
-              span {
-                // color: rgb(173, 173, 173);
-              }
-            }
           }
+        }
+      }
+
+      &:first-child {
+        // background-color: #d6d6d6;
+        label {
+          justify-content: center;
+          font-weight: 700;
         }
       }
     }
@@ -65,5 +86,6 @@
 
 @media screen and (min-width: 1200px) {
   .requestPrivsAll {
+    margin-bottom: 30px;
   }
 }
