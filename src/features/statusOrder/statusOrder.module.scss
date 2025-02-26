@@ -15,11 +15,9 @@
     text-transform: uppercase;
     letter-spacing: 0.17vmax;
   }
-
   & > h2 {
     margin-bottom: 2.5vmax;
   }
-
   & > h3 {
     font-size: 1.7vmax;
     margin-bottom: 1vmax;
@@ -36,17 +34,15 @@
     padding: 10px 30px 30px 30px;
     border-width: 10px;
 
-    h1,
-    h2 {
+    & > h1,
+    & > h2 {
       font-size: 24px;
       letter-spacing: 2px;
     }
-
-    h2 {
+    & > h2 {
       margin-bottom: 30px;
     }
-
-    h3 {
+    & > h3 {
       font-size: 20px;
       margin-bottom: 10px;
     }

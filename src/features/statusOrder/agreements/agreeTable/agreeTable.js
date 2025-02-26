@@ -29,21 +29,36 @@ export const AgreeTable = props => {
         }, {})
       : [];
 
+  const calcStatus = status => {
+    switch( status ) {
+      case 'agreed': return <span style={{color: 'light-green'}}>{dictionary.approved[lang]}</span>;
+      case 'refused': return <span style={{color: 'red'}}>{dictionary.rejected[lang]}</span>;
+      case 'sent': return <span style={{color: 'orange'}}>{dictionary.under_consideration[lang]}</span>;
+      case 'canceled': return <span style={{color: 'grey'}}>{dictionary.canceled[lang]}</span>;
+      case 'added': return <span style={{color: 'grey'}}>{dictionary.previous_stage_pending[lang]}</span>;
+      default: return <span></span>;
+    }
+  }       
+
   const darkMode = useSelector(darkTheme);
   const styleAgreeTable = darkMode ? `${styles.agreeTable} ${dark.agreeTable}` : `${styles.agreeTable} ${light.agreeTable}`;
 
   return (
-    <ul className={styleAgreeTable}>{ 
-      Object.entries(roleAgreements[role.asz32_id]).map(agreeStage => <li key={`${role.asz32_id}${agreeStage[0]}`} className={styles.stage}>
-        <label>{agreeStage[1][0].asz10_name}</label>
-        <ul className={styles.stageAgreements}>{
-          agreeStage[1].map(agree=> <Fragment key={agree.asz06_id}>
-            <div>{agree.asz06_path}</div>
-            <div>{`${agree.app12_name} ${agree.app12_email}`}</div>
-            <div>{agree.status}</div>
-          </Fragment>)  
-        }</ul>
-      </li>)
-    }</ul>   
+    <ul className={styleAgreeTable}>
+      <li><label>{dictionary.stage_name[lang]}</label><ul><li>{dictionary.org_Level[lang]}</li><li>{dictionary.approver[lang]}</li><li>{dictionary.status[lang]}</li></ul></li> 
+      { 
+        Object.entries(roleAgreements[role.asz32_id]).map(agreeStage => 
+          <li key={`${role.asz32_id}${agreeStage[0]}`}>
+            <label>{agreeStage[1][0].asz10_name}</label>
+            <ul>{
+              agreeStage[1].map(agree=> <Fragment key={agree.asz06_id}>
+                <li>{agree.asz06_path}</li>
+                <li>{`${agree.app12_name} ${agree.app12_email}`}</li>
+                <li>{calcStatus(agree.status)}</li>
+              </Fragment>)  
+            }</ul>
+          </li>
+        )
+      }</ul>   
   )
 }

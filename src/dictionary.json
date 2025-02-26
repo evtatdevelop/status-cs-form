@@ -81,13 +81,63 @@
   },
   "organizational_levels": {
     "EN": "Organizational levels",
-    "RU": "Cогласование",
+    "RU": "Организационные уровни",
     "ZH": "组织级别"
   },
   "role": {
     "EN": "Role",
     "RU": "Роль",
     "ZH": "角色"
+  },
+  "approvals": {
+    "EN": "Approvals",
+    "RU": "Согласования",
+    "ZH": "批准"
+  },
+  "stage_name": {
+    "EN": "Stage name",
+    "RU": "Название этапа",
+    "ZH": "艺名"
+  },
+  "org_Level": {
+    "EN": "Org. Level",
+    "RU": "Орг. Уровень",
+    "ZH": "组织级别"
+  },
+  "approver": {
+    "EN": "Approver",
+    "RU": "Согласующий",
+    "ZH": "审批人"
+  },
+  "status": {
+    "EN": "Status",
+    "RU": "Статус",
+    "ZH": "地位"
+  },
+  "approved": {
+    "EN": "Approved",
+    "RU": "Согласовано",
+    "ZH": "已批准"
+  },
+  "canceled": {
+    "EN": "Canceled",
+    "RU": "Отменено",
+    "ZH": "取消"
+  },
+  "under_consideration": {
+    "EN": "Under consideration",
+    "RU": "На рассмотрении",
+    "ZH": "正在考虑"
+  },
+  "previous_stage_pending": {
+    "EN": "Previous stage pending",
+    "RU": "Ожидается предыдущий этап",
+    "ZH": "上一阶段待定"
+  },
+  "rejected": {
+    "EN": "Rejected",
+    "RU": "Отклонено",
+    "ZH": "已拒绝"
   },
 
   "application": {

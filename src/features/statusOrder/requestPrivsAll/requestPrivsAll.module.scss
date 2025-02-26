@@ -3,7 +3,8 @@
   flex-direction: column;
   margin-bottom: 2.5vmax;
 
-  .h3 {
+  & > h3 {
+    font-size: 1.7vmax;
     margin-bottom: 1vmax;
   }
 
@@ -14,18 +15,6 @@
     border-bottom-style: solid;
     border-left-width: 1px;
     border-bottom-width: 1px;
-
-    // & :first-child {
-    //   li {
-    //     & > label {
-    //       font-weight: 700;
-    //       text-align: center;
-    //       padding: 0.5vmax;
-    //       border-right: 1px solid #d6d6d6;
-    //       background-color: #d6d6d6;
-    //     }
-    //   }
-    // }
 
     & > li {
       display: grid;
@@ -86,5 +75,9 @@
 @media screen and (min-width: 1200px) {
   .requestPrivsAll {
     margin-bottom: 30px;
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 }

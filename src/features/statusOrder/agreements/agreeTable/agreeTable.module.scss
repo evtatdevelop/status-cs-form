@@ -3,34 +3,55 @@
   display: flex;
   flex-direction: column;
   margin-top: 1vmax;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
 
-  font-weight: 300;
+  & > li:first-child {
+    label,
+    ul li {
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
+    }
+  }
 
-  .stage {
+  & > li {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 25% auto;
-    border-collapse: collapse;
 
-    label {
+    & > label {
       display: flex;
       padding: 0.5vmax;
       align-items: center;
       width: 100%;
-      border: 0.1vmax solid #42424279;
+      border-left-style: solid;
+      border-bottom-style: solid;
+      border-left-width: 1px;
+      border-bottom-width: 1px;
     }
-    .stageAgreements {
+    & > ul {
       display: grid;
       grid-template-rows: auto;
-      grid-template-columns: 40% 35% auto;
+      grid-template-columns: 40% 30% auto;
 
-      div {
+      & > li {
         display: flex;
         align-items: center;
-        border: 0.1vmax solid #42424279;
         padding: 0.3vmax 0.7vmax;
-        color: rgb(173, 173, 173);
+        border-left-style: solid;
+        border-bottom-style: solid;
+        border-left-width: 1px;
+        border-bottom-width: 1px;
       }
     }
-  }  
+    // & :first-child {
+    //   border-left-style: solid;
+    //   border-bottom-style: solid;
+    //   border-left-width: 1px;
+    //   border-bottom-width: 1px;
+    // }
+  }
 }

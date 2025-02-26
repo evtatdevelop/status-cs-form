@@ -7,7 +7,7 @@
   --interface-clr-light: #f04e25;
 
   --table-border-light: #d6d6d6;
-  --table-head-bg-light: #d6d6d6;
+  --table-head-bg-light: #f3f2f2;
 }
 
 .app {
@@ -47,30 +47,63 @@
 }
 
 .requestPrivsAll {
-  & > ul {
+  & > h3 {
+    color: var(--interface-clr-light);
+  }
+
+  ul,
+  li,
+  label {
     border-top-color: var(--table-border-light);
     border-left-color: var(--table-border-light);
     border-bottom-color: var(--table-border-light);
+    border-right-color: var(--table-border-light);
+  }
+  & > ul {
+    //   border-top-color: var(--table-border-light);
+    //   border-left-color: var(--table-border-light);
+    //   border-bottom-color: var(--table-border-light);
 
     & > li {
-      & > label {
-        border-top-color: var(--table-border-light);
-        border-right-color: var(--table-border-light);
-      }
-      & > ul {
-        border-right-color: var(--table-border-light);
+      //     & > label {
+      //       border-top-color: var(--table-border-light);
+      //       border-right-color: var(--table-border-light);
+      //     }
+      //     & > ul {
+      //       border-right-color: var(--table-border-light);
 
-        & > li {
-          border-top-color: var(--table-border-light);
+      //       & > li {
+      //         border-top-color: var(--table-border-light);
 
-          & > label {
-            border-right-color: var(--table-border-light);
-          }
-        }
-      }
+      //         & > label {
+      //           border-right-color: var(--table-border-light);
+      //         }
+      //       }
+      //     }
       &:first-child {
         background-color: var(--table-head-bg-light);
       }
     }
+  }
+}
+
+.agreements {
+  & > h3 {
+    color: var(--interface-clr-light);
+  }
+
+  ul,
+  li,
+  label {
+    border-top-color: var(--table-border-light);
+    border-left-color: var(--table-border-light);
+    border-bottom-color: var(--table-border-light);
+    border-right-color: var(--table-border-light);
+  }
+}
+
+.agreeTable {
+  & > li:first-child {
+    background-color: var(--table-head-bg-light);
   }
 }

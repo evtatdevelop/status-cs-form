@@ -49,30 +49,64 @@
 }
 
 .requestPrivsAll {
+  & > h3 {
+    color: var(--interface-clr-dark);
+  }
+
+  ul,
+  li,
+  label {
+    border-top-color: var(--table-border-dark);
+    border-left-color: var(--table-border-dark);
+    border-bottom-color: var(--table-border-dark);
+    border-right-color: var(--table-border-dark);
+  }
+
   & > ul {
-    border-top-color: #d6d6d6;
-    border-left-color: #d6d6d6;
-    border-bottom-color: #d6d6d6;
+    // border-top-color: #d6d6d6;
+    // border-left-color: #d6d6d6;
+    // border-bottom-color: #d6d6d6;
 
     & > li {
-      & > label {
-        border-top-color: #d6d6d6;
-        border-right-color: #d6d6d6;
-      }
-      & > ul {
-        border-right-color: #d6d6d6;
+      //   & > label {
+      //     border-top-color: #d6d6d6;
+      //     border-right-color: #d6d6d6;
+      //   }
+      //   & > ul {
+      //     border-right-color: #d6d6d6;
 
-        & > li {
-          border-top-color: #d6d6d6;
+      //     & > li {
+      //       border-top-color: #d6d6d6;
 
-          & > label {
-            border-right-color: #d6d6d6;
-          }
-        }
-      }
+      //       & > label {
+      //         border-right-color: #d6d6d6;
+      //       }
+      //     }
+      //   }
       &:first-child {
         background-color: var(--table-head-bg-dark);
       }
     }
+  }
+}
+
+.agreements {
+  & > h3 {
+    color: var(--interface-clr-dark);
+  }
+
+  ul,
+  li,
+  label {
+    border-top-color: var(--table-border-dark);
+    border-left-color: var(--table-border-dark);
+    border-bottom-color: var(--table-border-dark);
+    border-right-color: var(--table-border-dark);
+  }
+}
+
+.agreeTable {
+  & > li:first-child {
+    background-color: var(--table-head-bg-dark);
   }
 }
