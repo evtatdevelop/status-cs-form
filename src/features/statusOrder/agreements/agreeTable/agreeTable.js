@@ -6,6 +6,7 @@ import { useSelector, } from "react-redux";
 import { orderData } from '../../../order/orderSlice';
 import { darkTheme, langMode } from '../../../../appSlice';
 import dictionary from "../../../../dictionary.json";
+import { short_name } from "../../../../utils";
 
 export const AgreeTable = props => {
 
@@ -45,7 +46,7 @@ export const AgreeTable = props => {
 
   return (
     <ul className={styleAgreeTable}>
-      <li><label>{dictionary.stage_name[lang]}</label><ul><li>{dictionary.org_Level[lang]}</li><li>{dictionary.approver[lang]}</li><li>{dictionary.status[lang]}</li></ul></li> 
+      <li className=""><label>{dictionary.stage_name[lang]}</label><ul><li>{dictionary.org_Level[lang]}</li><li>{dictionary.approver[lang]}</li><li>{dictionary.status[lang]}</li></ul></li> 
       { 
         Object.entries(roleAgreements[role.asz32_id]).map(agreeStage => 
           <li key={`${role.asz32_id}${agreeStage[0]}`}>
@@ -53,8 +54,11 @@ export const AgreeTable = props => {
             <ul>{
               agreeStage[1].map(agree=> <Fragment key={agree.asz06_id}>
                 <li>{agree.asz06_path}</li>
-                <li>{`${agree.app12_name} ${agree.app12_email}`}</li>
-                <li>{calcStatus(agree.status)}</li>
+                <li><spa>{`${short_name(agree.app12_name)}`}</spa> <span  className={styles.smaller}>(<a href={`mailto:${agree.app12_email}`}>{agree.app12_email}</a>)</span></li>
+                <li>
+                  {calcStatus(agree.status)}
+                  <span className={styles.smaller}>{agree.last_date ? `(${agree.last_date})` : null}</span>
+                </li>
               </Fragment>)  
             }</ul>
           </li>

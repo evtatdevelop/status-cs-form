@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2.5vmax;
+  font-size: 1.35vmax;
 
   & > h3 {
     font-size: 1.7vmax;
@@ -13,8 +14,8 @@
     font-weight: 300;
     border-left-style: solid;
     border-bottom-style: solid;
-    border-left-width: 1px;
-    border-bottom-width: 1px;
+    border-left-width: 0.1vmax;
+    border-bottom-width: 0.1vmax;
 
     & > li {
       display: grid;
@@ -28,22 +29,22 @@
         padding: 0.5vmax;
         border-top-style: solid;
         border-right-style: solid;
-        border-top-width: 1px;
-        border-right-width: 1px;
+        border-top-width: 0.1vmax;
+        border-right-width: 0.1vmax;
       }
 
       & > ul {
         display: grid;
         grid-template-rows: auto;
         border-right-style: solid;
-        border-right-width: 1px;
+        border-right-width: 0.1vmaxx;
 
         & > li {
           display: grid;
           grid-template-rows: auto;
           grid-template-columns: 25% auto;
           border-top-style: solid;
-          border-top-width: 1px;
+          border-top-width: 0.1vmax;
 
           & > label {
             width: 100%;
@@ -52,7 +53,7 @@
             align-items: center;
             padding: 0.5vmax;
             border-right-style: solid;
-            border-right-width: 1px;
+            border-right-width: 0.1vmax;
           }
           & > ul {
             display: flex;
@@ -74,6 +75,7 @@
 
 @media screen and (min-width: 1200px) {
   .requestPrivsAll {
+    font-size: 16px;
     margin-bottom: 30px;
     h3 {
       font-size: 20px;

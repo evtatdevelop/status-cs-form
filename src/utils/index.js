@@ -33,3 +33,8 @@ export const strToStrDate = (str, lang) => {
   const mm = date.getMonth()+1 > 9 ? date.getMonth()+1 : `0${date.getMonth()+1}`
   return lang.toUpperCase() === 'RU' ? `${dd}.${mm}.${date.getFullYear()}` : `${dd}-${mm}-${date.getFullYear()}`;
 }
+
+export const short_name = (str, lang = 'RU') => {
+  const arrName= str.split(' ');
+  return `${arrName[0]} ${arrName[1][0]}.${arrName[2][0]}.`;
+}

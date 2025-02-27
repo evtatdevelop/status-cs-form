@@ -2,17 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 1vmax;
   border-top-style: solid;
   border-right-style: solid;
-  border-top-width: 1px;
-  border-right-width: 1px;
+  border-top-width: 0.1vmax;
+  border-right-width: 0.1vmax;
+  font-weight: 300;
+  font-size: 1.35vmax;
 
   & > li:first-child {
     label,
     ul li {
       display: flex;
       justify-content: center;
+      align-items: center;
       font-weight: 700;
     }
   }
@@ -29,8 +31,8 @@
       width: 100%;
       border-left-style: solid;
       border-bottom-style: solid;
-      border-left-width: 1px;
-      border-bottom-width: 1px;
+      border-left-width: 0.1vmax;
+      border-bottom-width: 0.1vmax;
     }
     & > ul {
       display: grid;
@@ -39,19 +41,38 @@
 
       & > li {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         padding: 0.3vmax 0.7vmax;
         border-left-style: solid;
         border-bottom-style: solid;
-        border-left-width: 1px;
-        border-bottom-width: 1px;
+        border-left-width: 0.1vmax;
+        border-bottom-width: 0.1vmax;
+
+        .smaller {
+          font-size: 1vmax;
+        }
       }
     }
-    // & :first-child {
-    //   border-left-style: solid;
-    //   border-bottom-style: solid;
-    //   border-left-width: 1px;
-    //   border-bottom-width: 1px;
-    // }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .agreeTable {
+    font-size: 16px;
+
+    & > li {
+      & > label {
+        padding: 7px;
+      }
+      & > ul {
+        & > li {
+          padding: 3px 7px;
+          .date {
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 }
