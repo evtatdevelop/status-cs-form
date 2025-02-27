@@ -5,10 +5,9 @@ import light from '../../light.module.scss';
 import { useSelector, useDispatch } from "react-redux";
 import { darkTheme, langMode, setLangMode, } from '../../appSlice';
 import { remoteUser, setLang, langLoading } from '../user/userSlice';
-// import dictionary from "../../dictionary.json";
 import { TestLoader } from './testLoader';
-import { getOrderData, orderData } from "../order/orderSlice";
-import { oredrType } from "../../config";
+// import { getOrderData, orderData } from "../order/orderSlice";
+// import { oredrType } from "../../config";
 
 export const LangButton = () => {
   const dispatch = useDispatch(); 
@@ -16,17 +15,20 @@ export const LangButton = () => {
   const user = useSelector(remoteUser);
   const lang = useSelector(langMode);
   const langLoad = useSelector(langLoading);
-  const order = useSelector(orderData);
+  // const order = useSelector(orderData);
 
   const [show, setShow] = useState(false)
 
+  console.log(user);
   
   const setAppLang = lang => {
     dispatch(setLang( {'app12_id': user.id, 'lang': lang === 'ZH' ? 'EN' : lang, } ));
     dispatch(setLangMode(lang));
     setShow(false);
-    dispatch(getOrderData( {'order_type': oredrType, 'id': order.main.asz31_id, } ));
+    // if ( user.lang ) dispatch(getOrderData( {'order_type': oredrType, 'id': order.main.asz31_id } ));
   }
+
+
   
   const styleLangButton = darkMode ? `${styles.langButton} ${dark.langButton}` : `${styles.langButton} ${light.langButton}`;
   const styleSelectList = show ? `${styles.selectList} ${styles.showSelectList}` : `${styles.selectList} ${styles.hideSelectList}`

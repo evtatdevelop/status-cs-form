@@ -23,7 +23,10 @@ export const userSlice = createSlice({
         state.data = action.payload;
       })
 
-      .addCase(setLang.pending, ( state ) => { state.langLoading = true })
+      .addCase(setLang.pending, ( state ) => { 
+        state.data.lang = null;
+        state.langLoading = true 
+      })
       .addCase(setLang.fulfilled, ( state, action ) => {
         state.data.lang = action.payload;
         state.langLoading = false;

@@ -54,7 +54,7 @@ export const AgreeTable = props => {
             <ul>{
               agreeStage[1].map(agree=> <Fragment key={agree.asz06_id}>
                 <li>{agree.asz06_path}</li>
-                <li><spa>{`${short_name(agree.app12_name)}`}</spa> <span  className={styles.smaller}>(<a href={`mailto:${agree.app12_email}`}>{agree.app12_email}</a>)</span></li>
+                <li><span>{`${short_name(agree.app12_name)}`}</span> <span  className={styles.smaller}>(<a href={`mailto:${agree.app12_email}`}>{agree.app12_email}</a>)</span></li>
                 <li>
                   {calcStatus(agree.status)}
                   <span className={styles.smaller}>{agree.last_date ? `(${agree.last_date})` : null}</span>

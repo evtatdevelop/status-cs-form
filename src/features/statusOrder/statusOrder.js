@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect,  } from 'react';
 import styles from './statusOrder.module.scss';
 import dark from '../../dark.module.scss';
@@ -15,6 +14,7 @@ import { OrderData } from './orderData/orderData';
 import { langLoading } from '../user/userSlice';
 import { RequestPrivsAll } from './requestPrivsAll/requestPrivsAll';
 import { Agreements } from './agreements/agreements';
+import { remoteUser } from '../user/userSlice';
 
 export const StatusOrder = () => {
 
@@ -24,10 +24,11 @@ export const StatusOrder = () => {
   const langLoadingData = useSelector(langLoading);
   const lang = useSelector(langMode);
   const dispatch = useDispatch(); 
+  const user = useSelector(remoteUser);
 
   useEffect(() => {
-    dispatch(getOrderData( {'order_type': oredrType, 'id': id, } ));
-  }, []);
+    if (user.lang) dispatch(getOrderData( {'order_type': oredrType, 'id': id, } ));
+  }, [dispatch, id, user.lang]);
 
   console.log('order: ',order);
   console.log('lang: ',lang);
@@ -38,7 +39,7 @@ export const StatusOrder = () => {
   return (
     <section className={styleStatusOrder} >
       <Header/>
-      { !loadingData && !langLoadingData
+      { !loadingData && !langLoadingData && lang
         ? <>
             <h1>{dictionary.ams_order_form[lang]}</h1>
             <h2>{order?.corp_system?.full_name_lang}</h2>
