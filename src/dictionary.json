@@ -139,6 +139,11 @@
     "RU": "Отклонено",
     "ZH": "已拒绝"
   },
+  "attachments": {
+    "EN": "Attachments",
+    "RU": "Вложения",
+    "ZH": "附件"
+  },
 
   "application": {
     "EN": "application",

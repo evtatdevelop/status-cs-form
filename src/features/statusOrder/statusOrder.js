@@ -15,6 +15,7 @@ import { langLoading } from '../user/userSlice';
 import { RequestPrivsAll } from './requestPrivsAll/requestPrivsAll';
 import { Agreements } from './agreements/agreements';
 import { remoteUser } from '../user/userSlice';
+import { Attachments } from './attachments/attachments';
 
 export const StatusOrder = () => {
 
@@ -47,6 +48,7 @@ export const StatusOrder = () => {
             <OrderData/>
             <RequestPrivsAll/>
             <Agreements/>
+            <Attachments/>
           </>
         : <Loader/>
       }

@@ -1,0 +1,22 @@
+.attachments {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5vmax;
+  font-size: 1.35vmax;
+
+  & > h3 {
+    font-size: 1.7vmax;
+    margin-bottom: 1vmax;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .requestPrivsAll {
+    font-size: 16px;
+    margin-bottom: 30px;
+    h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

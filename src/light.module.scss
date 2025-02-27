@@ -60,26 +60,7 @@
     border-right-color: var(--table-border-light);
   }
   & > ul {
-    //   border-top-color: var(--table-border-light);
-    //   border-left-color: var(--table-border-light);
-    //   border-bottom-color: var(--table-border-light);
-
     & > li {
-      //     & > label {
-      //       border-top-color: var(--table-border-light);
-      //       border-right-color: var(--table-border-light);
-      //     }
-      //     & > ul {
-      //       border-right-color: var(--table-border-light);
-
-      //       & > li {
-      //         border-top-color: var(--table-border-light);
-
-      //         & > label {
-      //           border-right-color: var(--table-border-light);
-      //         }
-      //       }
-      //     }
       &:first-child {
         background-color: var(--table-head-bg-light);
       }
@@ -105,5 +86,11 @@
 .agreeTable {
   & > li:first-child {
     background-color: var(--table-head-bg-light);
+  }
+}
+
+.attachments {
+  & > h3 {
+    color: var(--interface-clr-light);
   }
 }
