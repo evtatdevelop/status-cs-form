@@ -8,6 +8,8 @@
 
   --table-border-dark: #d6d6d6;
   --table-head-bg-dark: #6e7f80;
+
+  --attention-color-dark: coral;
 }
 
 .app {
@@ -98,5 +100,17 @@
 .attachments {
   & > h3 {
     color: var(--interface-clr-dark);
+  }
+
+  a {
+    color: var(--interface-clr-dark);
+  }
+
+  & > ul {
+    li {
+      button {
+        color: var(--attention-color-dark);
+      }
+    }
   }
 }

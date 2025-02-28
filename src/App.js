@@ -28,7 +28,7 @@ function App() {
   }, [dispatch, user.lang]);
 
   
-  console.log(user);
+  // console.log(user);
 
 
   const darkMode = useSelector(darkTheme);

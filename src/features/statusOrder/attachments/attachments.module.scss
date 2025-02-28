@@ -8,15 +8,59 @@
     font-size: 1.7vmax;
     margin-bottom: 1vmax;
   }
+
+  & > ul {
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1vmax;
+      div {
+        margin-right: 1vmax;
+        a {
+          font-size: 1.35vmax;
+        }
+        p {
+          font-size: 1vmax;
+        }
+      }
+      button {
+        font-size: 1.1vmax;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        width: 2.5vmax;
+        height: 2.5vmax;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
-  .requestPrivsAll {
+  .attachments {
     font-size: 16px;
     margin-bottom: 30px;
-    h3 {
+    & > h3 {
       font-size: 20px;
       margin-bottom: 20px;
+    }
+
+    & > ul {
+      li {
+        div {
+          a {
+            font-size: 16px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+        button {
+          font-size: 14px;
+          width: 25px;
+          height: 25px;
+        }
+      }
     }
   }
 }

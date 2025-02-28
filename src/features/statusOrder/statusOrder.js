@@ -1,10 +1,10 @@
-import { useEffect,  } from 'react';
+import { useEffect, } from 'react';
 import styles from './statusOrder.module.scss';
 import dark from '../../dark.module.scss';
 import light from '../../light.module.scss';
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { orderData, getOrderData, loading } from '../order/orderSlice';
+import { orderData, getOrderData, loading, } from '../order/orderSlice';
 import { Loader } from '../components/loader/loader';
 import { darkTheme, langMode } from '../../appSlice';
 import { Header } from '../header/header';
@@ -28,11 +28,8 @@ export const StatusOrder = () => {
   const user = useSelector(remoteUser);
 
   useEffect(() => {
-    if (user.lang) dispatch(getOrderData( {'order_type': oredrType, 'id': id, } ));
+    if ( user.lang ) dispatch(getOrderData( {'order_type': oredrType, 'id': id, } ));
   }, [dispatch, id, user.lang]);
-
-  console.log('order: ',order);
-  console.log('lang: ',lang);
   
   const darkMode = useSelector(darkTheme);
   const styleStatusOrder = darkMode ? `${styles.statusOrder} ${dark.statusOrder}` : `${styles.statusOrder} ${light.statusOrder}`;

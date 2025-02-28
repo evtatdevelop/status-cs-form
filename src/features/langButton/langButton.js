@@ -19,7 +19,7 @@ export const LangButton = () => {
 
   const [show, setShow] = useState(false)
 
-  console.log(user);
+  // console.log(user);
   
   const setAppLang = lang => {
     dispatch(setLang( {'app12_id': user.id, 'lang': lang === 'ZH' ? 'EN' : lang, } ));
@@ -38,13 +38,13 @@ export const LangButton = () => {
       { langLoad || !lang
         ? <TestLoader/>
         : <>
-            <button type='buttom'
+            <button type='button'
               onClick={() => setShow(!show)}
             >{lang}</button>
             <ul className={styleSelectList}>
-              { lang !== 'RU' ? <li><button type='buttom' onClick={() => setAppLang('RU') } >Ru</button></li> : null}
-              { lang !== 'EN' ? <li><button type='buttom' onClick={() => setAppLang('EN') } >En</button></li> : null}
-              { lang !== 'ZH' ? <li><button type='buttom' onClick={() => setAppLang('ZH') } >Zh</button></li> : null}         
+              { lang !== 'RU' ? <li><button type='button' onClick={() => setAppLang('RU') } >Ru</button></li> : null}
+              { lang !== 'EN' ? <li><button type='button' onClick={() => setAppLang('EN') } >En</button></li> : null}
+              { lang !== 'ZH' ? <li><button type='button' onClick={() => setAppLang('ZH') } >Zh</button></li> : null}         
             </ul>        
           </>
       }

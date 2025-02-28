@@ -39,9 +39,10 @@ export default class Service {
     return await res.json(); 
   }
 
-  deleteResource = async (url, api_key) => {
+  deleteResource = async (url, data) => {
     const res = await fetch(url, {
       method: 'DELETE',
+      // body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
         // 'API-Key': api_key
