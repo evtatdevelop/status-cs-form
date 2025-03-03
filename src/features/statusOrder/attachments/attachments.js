@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import styles from './attachments.module.scss';
 import { useSelector, useDispatch } from "react-redux";
 import dark from '../../../dark.module.scss';
@@ -6,14 +6,15 @@ import light from '../../../light.module.scss';
 import { orderData } from '../../order/orderSlice';
 import { darkTheme, langMode } from '../../../appSlice';
 import dictionary from "../../../dictionary.json";
-import { deldelAttachData, attachLoading} from '../../order/orderSlice';
+import { deldelAttachData, delAttachLoading} from '../../order/orderSlice';
 import { TestLoader } from './testLoader';
+import { UploadFile } from '../../uploadFile/uplodeFile';
 
 export const Attachments = () => {
   const dispatch  = useDispatch();
   const order = useSelector(orderData);
   const lang = useSelector(langMode);
-  const attachLoad = useSelector(attachLoading);
+  const attachLoad = useSelector(delAttachLoading);
 
   const [loadingId, setloadingId] = useState(null);
 
@@ -21,7 +22,7 @@ export const Attachments = () => {
     dispatch(deldelAttachData({'asz63_id': id, 'asz31_id': order.main.asz31_id,}));
     setloadingId(id);
   }
-  
+
   console.log('order: ',order);
 
   const darkMode = useSelector(darkTheme);
@@ -50,8 +51,8 @@ export const Attachments = () => {
             </li>
           ) } </ul>
         : null
-
       }
+      <UploadFile/>
     </section>
   )
 }

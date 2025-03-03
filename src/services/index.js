@@ -42,7 +42,6 @@ export default class Service {
   deleteResource = async (url, data) => {
     const res = await fetch(url, {
       method: 'DELETE',
-      // body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
         // 'API-Key': api_key
@@ -55,7 +54,9 @@ export default class Service {
   uploadFile = async (url, data) => {
     console.log(data);
     const formData = new FormData();
+    formData.append('asz31_id', data.asz31_id);
     formData.append('file', data.file);
+    
     const res = await fetch(url, {
       method: 'POST',
       body: formData,
