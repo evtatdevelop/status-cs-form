@@ -98,9 +98,23 @@
 
   & > ul {
     li {
+      label {
+        background-color: var(--table-head-bg-light);
+        border-color: var(--table-border-light);
+      }
       button {
         color: var(--attention-color-light);
       }
+    }
+  }
+}
+
+.uplodefile {
+  label {
+    // color: var(--interface-clr-light);
+    div {
+      background-color: var(--table-head-bg-light);
+      border-color: var(--table-border-light);
     }
   }
 }

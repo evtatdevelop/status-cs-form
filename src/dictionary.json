@@ -144,6 +144,11 @@
     "RU": "Вложения",
     "ZH": "附件"
   },
+  "selectFile": {
+    "EN": "Select file",
+    "RU": "Добавить файл",
+    "ZH": "选择文件"
+  },
 
   "application": {
     "EN": "application",

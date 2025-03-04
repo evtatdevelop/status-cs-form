@@ -2,6 +2,8 @@ import { useState, useEffect  } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from './uploadFile.module.scss';
 import dictionary from '../../dictionary.json';
+import dark from '../../dark.module.scss';
+import light from '../../light.module.scss';
 import { darkTheme, langMode } from "../../appSlice";
 import { getAttachmentsData, } from "../order/orderSlice";
 import { orderData, addAttachLoading, setAttachLoading } from "../order/orderSlice";
@@ -57,16 +59,19 @@ export const UploadFile = props => {
     }
   }
 
+  const darkMode = useSelector(darkTheme);
+  const styleuUlodefile = darkMode ? `${styles.uplodefile} ${dark.uplodefile}` : `${styles.uplodefile} ${light.uplodefile}`;
+  
   return (
-    <section className={styles.uplodefile} >
+    <section className={styleuUlodefile} >
       <label htmlFor="file"
         onDrop={handlerDrop}
         onDragEnter={stopDefault}
         onDragOver={stopDefault}        
-      >{ attachLoad
-         ? <TestLoader/> 
-         : 'select_file'
-      }</label>
+      ><div>{ attachLoad
+         ? <TestLoader/>
+         : null
+      } </div>{dictionary.selectFile[lang]}</label>
       <input type="file"
         className={styles.file}
         id='file'

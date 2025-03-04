@@ -23,7 +23,7 @@ export const Attachments = () => {
     setloadingId(id);
   }
 
-  console.log('order: ',order);
+  console.log('order: ',order.attachments);
 
   const darkMode = useSelector(darkTheme);
   const styleAttachments = darkMode ? `${styles.attachments} ${dark.attachments}` : `${styles.attachments} ${light.attachments}`;
@@ -34,6 +34,7 @@ export const Attachments = () => {
       { order?.attachments
         ? <ul> { order.attachments.map(item => 
             <li key={item.id}>
+              <label>{item.file_name.split('.')[1]}</label>
               <div>
                 <a href={`https://asuz.digtp.com/corpsystems_newrelease/download${order.main.session_key}_${item.id}`}>{item.file_name}</a>
                 <p>Add: {item.app12_fio} (<a href={`mailto:${item.app12_email}`}>{item.app12_email}</a>) {item.date_create}</p>                    
