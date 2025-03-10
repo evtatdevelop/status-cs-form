@@ -10,6 +10,9 @@
   --table-head-bg-dark: #6e7f80;
 
   --attention-color-dark: coral;
+
+  --extra-bg-dark: #6e7f80;
+  --extra-clr-dark: wheat;
 }
 
 .app {
@@ -125,6 +128,20 @@
     div {
       background-color: var(--table-head-bg-dark);
       border-color: var(--table-border-dark);
+    }
+  }
+}
+
+.control {
+  & > div {
+    button {
+      color: var(--app-clr-dark);
+      border-color: var(--table-border-dark);
+      background-color: var(--extra-bg-dark);
+      color: var(--extra-clr-dark);
+    }
+    span {
+      color: var(--extra-bg-dark);
     }
   }
 }

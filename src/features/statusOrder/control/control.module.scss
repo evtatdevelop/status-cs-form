@@ -1,0 +1,51 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5vmax;
+  margin-bottom: 2.5vmax;
+
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      margin: 0;
+      width: 35%;
+      padding: 0.7vmax 2vmax;
+      border-style: solid;
+      border-width: 0.1vmax;
+      font-size: 1.35vmax;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      width: 45%;
+      text-align: justify;
+      font-size: 1vmax;
+      margin-top: 1vmax;
+      line-height: 1vmax;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .control {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    div {
+      button {
+        font-size: 15px;
+      }
+      span {
+        font-size: 12px;
+        margin-top: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+}

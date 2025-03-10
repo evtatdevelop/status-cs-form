@@ -9,6 +9,7 @@ import dictionary from "../../../dictionary.json";
 import { deldelAttachData, delAttachLoading} from '../../order/orderSlice';
 import { TestLoader } from './testLoader';
 import { UploadFile } from '../../uploadFile/uplodeFile';
+import { downloadFile } from '../../order/orderSliceAPI';
 
 export const Attachments = () => {
   const dispatch  = useDispatch();
@@ -23,7 +24,7 @@ export const Attachments = () => {
     setloadingId(id);
   }
 
-  console.log('order: ',order.attachments);
+  // console.log('order: ',order.attachments);
 
   const darkMode = useSelector(darkTheme);
   const styleAttachments = darkMode ? `${styles.attachments} ${dark.attachments}` : `${styles.attachments} ${light.attachments}`;
@@ -36,8 +37,11 @@ export const Attachments = () => {
             <li key={item.id}>
               <label>{item.file_name.split('.')[1]}</label>
               <div>
-                <a href={`https://asuz.digtp.com/corpsystems_newrelease/download${order.main.session_key}_${item.id}`}>{item.file_name}</a>
-                <p>Add: {item.app12_fio} (<a href={`mailto:${item.app12_email}`}>{item.app12_email}</a>) {item.date_create}</p>                    
+                {/* <a href={`https://asuz.digtp.com/corpsystems_newrelease/download${order.main.session_key}_${item.id}`}>{item.file_name}</a> */}
+                <a href={`https://asuz.digtp.com/api/download.php?orderid=${order.main.session_key}&file_id=${item.id}`}>{item.file_name}</a>
+                {/* <a href={`https://asuz.digtp.com/api_tst/download${order.main.session_key}_${item.id}`}>{item.file_name}</a> */}
+                {/* <button onClick={() => downloadFile({'asz31_id': order.main.session_key, 'asz63_id': item.id})}>{item.file_name}</button> */}
+                <p>{item.app12_fio} (<a href={`mailto:${item.app12_email}`}>{item.app12_email}</a>) {item.date_create}</p>                    
               </div>
               { item.can_delete_file === '1'
                 ? <button type='button'

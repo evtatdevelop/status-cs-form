@@ -10,6 +10,9 @@
   --table-head-bg-light: #f3f2f2;
 
   --attention-color-light: red;
+
+  --extra-bg-light: #4c8cc9;
+  --extra-clr-light: white;
 }
 
 .app {
@@ -45,6 +48,12 @@
 .langButton {
   button {
     color: var(--interface-clr-light);
+  }
+}
+
+.orderData {
+  a {
+    color: var(--extra-bg-light);
   }
 }
 
@@ -89,13 +98,18 @@
   & > li:first-child {
     background-color: var(--table-head-bg-light);
   }
+  a {
+    color: var(--extra-bg-light);
+  }
 }
 
 .attachments {
   & > h3 {
     color: var(--interface-clr-light);
   }
-
+  a {
+    color: var(--extra-bg-light);
+  }
   & > ul {
     li {
       label {
@@ -115,6 +129,20 @@
     div {
       background-color: var(--table-head-bg-light);
       border-color: var(--table-border-light);
+    }
+  }
+}
+
+.control {
+  div {
+    button {
+      color: var(--app-clr-light);
+      border-color: var(--table-border-light);
+      background-color: var(--extra-bg-light);
+      color: var(--extra-clr-light);
+    }
+    span {
+      color: var(--extra-bg-light);
     }
   }
 }

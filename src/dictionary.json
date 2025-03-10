@@ -149,6 +149,26 @@
     "RU": "Добавить файл",
     "ZH": "选择文件"
   },
+  "complete_stage": {
+    "EN": "Complete the approval stage ahead of schedule (go to the next stage)",
+    "RU": "Досрочно завершить этап согласования (перейти на следующий этап)",
+    "ZH": "提前完成审批阶段（进入下一阶段）"
+  },
+  "remove_request": {
+    "EN": "Remove the request from approval (cancel)",
+    "RU": "Снять заявку с согласования (отменить)",
+    "ZH": "取消审批请求（取消）"
+  },
+  "complete_stage_description": {
+    "EN": "If one or several positions in the request are delayed for a long time under approval, you can cancel them and go to the next stage. Cancelled positions will not be issued for access. If necessary, it will be possible to create separate requests for them. If the current stage of approval is the last one, the request will be sent to execution.",
+    "RU": "В случае , если одна или несколько позиций в заявке надолго задержались на согласовании, можно отменить их и перейти на следущий этап. Отмененные позиции не будут выданы на доступ, при необходимости можно будет создать по ним отдельные заявки. В случае, если текущий этап согласования - последний, заявка будет направлена в работу.",
+    "ZH": "如果请求中的一个或多个职位在审批过程中被延迟了很长时间，您可以取消它们并进入下一阶段。取消的职位将不再发放。如有必要，可以为它们创建单独的请求。如果当前的审批阶段是最后一个阶段，则请求将被发送执行。"
+  },
+  "remove_request_description": {
+    "EN": "Complete cancellation of request approval. The request form will not be generated.",
+    "RU": "Полная отмена согласования по заявке. Бланк заявки не будет сформирован.",
+    "ZH": "完全取消请求批准。不会生成请求表单。"
+  },
 
   "application": {
     "EN": "application",

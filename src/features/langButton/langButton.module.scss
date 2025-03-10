@@ -29,7 +29,7 @@
     transition: opacity 0.3s, max-height 0.5s;
 
     &.hideSelectList {
-      max-height: 0px;
+      max-height: 0vmax;
       overflow: hidden;
       opacity: 0;
     }

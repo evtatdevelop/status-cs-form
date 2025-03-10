@@ -34,7 +34,7 @@ export const AgreeTable = props => {
     switch( status ) {
       case 'agreed': return <span style={{color: 'light-green'}}>{dictionary.approved[lang]}</span>;
       case 'refused': return <span style={{color: 'red'}}>{dictionary.rejected[lang]}</span>;
-      case 'sent': return <span style={{color: 'orange'}}>{dictionary.under_consideration[lang]}</span>;
+      case 'sent': return <p style={{color: 'orange'}}>{dictionary.under_consideration[lang]}</p>;
       case 'canceled': return <span style={{color: 'grey'}}>{dictionary.canceled[lang]}</span>;
       case 'added': return <span style={{color: 'grey'}}>{dictionary.previous_stage_pending[lang]}</span>;
       default: return <span></span>;

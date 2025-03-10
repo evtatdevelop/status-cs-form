@@ -70,11 +70,14 @@
           border-width: 1px;
         }
         div {
-          a {
+          & > a {
             font-size: 16px;
           }
           p {
             font-size: 12px;
+            a {
+              font-size: 12px;
+            }
           }
         }
         button {

@@ -8,3 +8,6 @@ export const getAttachments = ( data ) => service.getResource(`${apiBase}/?q=att
 export const delAttachment = ( data ) => service.updateResource(`${apiBase}/?q=attachment`, data);
 export const uploadFile = ( data ) => service.uploadFile(`${apiBase}/?q=uploadfile`, data);
 // export const uploadFile = ( data ) => service.uploadFile(`${apiBase}/?q=uploadfile&asz31_id=${data.asz31_id}`, data);
+export const downloadFile = ( data ) => service.getResource(`${apiBase}/?q=download&asz31_id=${data.asz31_id}&asz63_id=${data.asz63_id}`, data);
+export const completeStage = ( data ) => service.updateResource(`${apiBase}/?q=completeStage`, data);
+export const removeRequest = ( data ) => service.updateResource(`${apiBase}/?q=removeRequest`, data);
