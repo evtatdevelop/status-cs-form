@@ -25,7 +25,7 @@ export const UploadFile = props => {
       dispatch(getAttachmentsData({ 'asz31_id': order.main.asz31_id, }));
       setUploaded(false);
     }
-  }, [dispatch, order.main.asz31_id, uploaded]);
+  }, [dispatch, order?.main?.asz31_id, uploaded]);
 
   // const fileReader = new FileReader();
   // fileReader.onloadend = () => setFileURL(fileReader.result);

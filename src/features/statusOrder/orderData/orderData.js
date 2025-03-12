@@ -134,6 +134,14 @@ export const OrderData = () => {
         : null
       }
 
+      { order?.main?.need_consult_account && order?.main?.need_consult_account === 1
+        ? <li>
+            <div></div>  
+            <div>{dictionary.user_consultant[lang]}</div>
+          </li>
+        : null
+      }
+
     </ul>    
   )
 }

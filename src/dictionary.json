@@ -179,6 +179,21 @@
     "RU": "МВЗ",
     "ZH": "MB3"
   },
+  "user_consultant": {
+    "EN": "The user is a consultant (requires a personalized account)",
+    "RU": "Пользователь является консультантом (требуется именная УЗ)",
+    "ZH": "用户是顾问（需要个性化账户）"
+  },
+  "auto_negotiation": {
+    "EN": "in auto-negotiation mode",
+    "RU": "в режиме автосогласования",
+    "ZH": "自动协商模式"
+  },
+  "deputy_mode": {
+    "EN": "in deputy mode",
+    "RU": "в режиме замещения",
+    "ZH": "代理模式"
+  },
 
   "application": {
     "EN": "application",

@@ -58,6 +58,16 @@ export const AgreeTable = props => {
                 <li>
                   {calcStatus(agree.status)}
                   <span className={styles.smaller}>{agree.last_date ? `(${agree.last_date})` : null}</span>
+                  { agree.vote_login && agree.app12_fact_id !== agree.app12_id
+                    ? agree.autoagree_flag_2 === 1
+                      ? <span className={styles.smaller}>{dictionary.auto_negotiation[lang]}</span>
+                      : <span className={styles.smaller}>{dictionary.deputy_mode[lang]} - {short_name(agree.app12_fact_name)}</span>
+                    : null
+                  }
+                  { agree.agree_comment && agree.autoagree_flag_2 !== 1
+                    ? <span className={styles.smaller}><span className={styles.bold}>{dictionary.comment[lang]}</span>: {agree.agree_comment}</span>
+                    : null
+                  }
                 </li>
               </Fragment>)  
             }</ul>
