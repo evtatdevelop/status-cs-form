@@ -52,17 +52,20 @@ export const orderSlice = createSlice({
         // state.data.attachments = action.payload;
       })
 
-      .addCase(completeStageData.pending, ( state ) => { state.actionsLoading = true })
+      .addCase(completeStageData.pending, ( state ) => { state.loading = true })
       .addCase(completeStageData.fulfilled, ( state, action ) => {
-        state.actionsLoading = false
-        console.log(action.payload);
-        
+        // state.actionsLoading = false
+        // console.log(action.payload);
+        state.loading = false;
+        state.data = action.payload;
       })
 
-      .addCase(removeRequestData.pending, ( state ) => { state.actionsLoading = true })
+      .addCase(removeRequestData.pending, ( state ) => { state.loading = true })
       .addCase(removeRequestData.fulfilled, ( state, action ) => {
-        state.actionsLoading = false;
-        console.log(action.payload);
+        // state.actionsLoading = false;
+        // console.log(action.payload);
+        state.loading = false;
+        state.data = action.payload;
       })
   }
 });

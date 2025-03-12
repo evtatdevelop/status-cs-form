@@ -118,6 +118,22 @@ export const OrderData = () => {
         : null
       }
 
+      { order?.main?.tn_number
+        ? <li>
+            <div>{dictionary.tn_number[lang]}:</div>  
+            <div>{order.main.tn_number}</div>
+          </li>
+        : null
+      }
+
+      { order?.main?.costcenter
+        ? <li>
+            <div>{dictionary.costcenter[lang]}:</div>  
+            <div>{order.main.costcenter}</div>
+          </li>
+        : null
+      }
+
     </ul>    
   )
 }
