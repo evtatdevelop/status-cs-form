@@ -194,6 +194,31 @@
     "RU": "в режиме замещения",
     "ZH": "代理模式"
   },
+  "execution": {
+    "EN": "Execution",
+    "RU": "Исполнение",
+    "ZH": "执行"
+  },
+  "executor": {
+    "EN": "Responsible on request",
+    "RU": "Исполнитель по заявке",
+    "ZH": "根据要求承包商"
+  },
+  "route": {
+    "EN": "Route",
+    "RU": "Mаршрут",
+    "ZH": "路线"
+  },
+  "receipt_mark": {
+    "EN": "Receipt mark",
+    "RU": "Отметка о получении",
+    "ZH": "执行"
+  },
+  "mark_completed": {
+    "EN": "Mark as completed",
+    "RU": "Отметка о выполнении",
+    "ZH": "标记为完成"
+  },
 
   "application": {
     "EN": "application",

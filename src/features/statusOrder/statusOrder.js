@@ -17,6 +17,7 @@ import { Agreements } from './agreements/agreements';
 import { remoteUser } from '../user/userSlice';
 import { Attachments } from './attachments/attachments';
 import { Control } from './control/control';
+import { Execution } from './execution/execution';
 
 export const StatusOrder = () => {
 
@@ -47,6 +48,10 @@ export const StatusOrder = () => {
             <RequestPrivsAll/>
             <Agreements/>
             <Attachments/>
+            { order?.execute_list?.length
+              ? <Execution/>
+              : null
+            }
             <Control/>
           </>
         : <Loader/>

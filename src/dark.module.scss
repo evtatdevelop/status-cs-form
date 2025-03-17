@@ -145,3 +145,31 @@
     }
   }
 }
+
+.execution {
+  & > h3 {
+    color: var(--interface-clr-dark);
+  }
+
+  ul,
+  li,
+  div,
+  label {
+    border-top-color: var(--table-border-dark);
+    border-left-color: var(--table-border-dark);
+    border-bottom-color: var(--table-border-dark);
+    border-right-color: var(--table-border-dark);
+  }
+
+  & > ul {
+    & > li {
+      &:first-child {
+        background-color: var(--table-head-bg-dark);
+      }
+    }
+  }
+
+  a {
+    color: var(--interface-clr-dark);
+  }
+}

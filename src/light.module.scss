@@ -146,3 +146,31 @@
     }
   }
 }
+
+.execution {
+  & > h3 {
+    color: var(--interface-clr-light);
+  }
+
+  ul,
+  li,
+  div,
+  label {
+    border-top-color: var(--table-border-light);
+    border-left-color: var(--table-border-light);
+    border-bottom-color: var(--table-border-light);
+    border-right-color: var(--table-border-dark);
+  }
+
+  & > ul {
+    & > li {
+      &:first-child {
+        background-color: var(--table-head-bg-light);
+      }
+    }
+  }
+
+  a {
+    color: var(--interface-clr-light);
+  }
+}

@@ -14,7 +14,7 @@ export const Control = () => {
   const lang = useSelector(langMode);
   const actionsLoad = useSelector(actionsLoading);
 
-  console.log('order: ',order);
+  // console.log('order: ',order);
 
   const darkMode = useSelector(darkTheme);
   const styleControl = darkMode ? `${styles.control} ${dark.control}` : `${styles.control} ${light.control}`;

@@ -1,0 +1,96 @@
+.execution {
+  display: flex;
+  flex-direction: column;
+
+  & > h3 {
+    font-size: 1.7vmax;
+    margin-bottom: 1vmax;
+  }
+
+  & > ul {
+    & > li {
+      display: grid;
+      grid-template-columns: 25% 10% 20% 20% auto;
+
+      div,
+      label {
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-bottom-width: 0.1vmax;
+        border-left-width: 0.1vmax;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div {
+        padding: 0.5vmax;
+        .smaller {
+          font-size: 1vmax;
+        }
+        .bold {
+          font-weight: 700;
+        }
+
+        button {
+          padding: 0.5vmax;
+          overflow: hidden;
+        }
+        button:first-child {
+          margin-bottom: 0.5vmax;
+        }
+      }
+    }
+
+    & :first-child {
+      label {
+        text-align: center;
+        padding: 0.5vmax;
+      }
+    }
+
+    border-top-style: solid;
+    border-right-style: solid;
+    border-top-width: 0.1vmax;
+    border-right-width: 0.1vmax;
+  }
+
+  ul li:first-child {
+    font-weight: 700;
+  }
+
+  ul li div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .execution {
+    & > h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    & > ul {
+      & > li {
+        div {
+          padding: 7px;
+          .smaller {
+            font-size: 12px;
+          }
+        }
+      }
+
+      & :first-child {
+        label {
+          padding: 7px;
+        }
+      }
+    }
+  }
+}
