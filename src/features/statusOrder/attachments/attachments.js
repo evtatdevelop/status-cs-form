@@ -1,4 +1,4 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 import styles from './attachments.module.scss';
 import { useSelector, useDispatch } from "react-redux";
 import dark from '../../../dark.module.scss';

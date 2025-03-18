@@ -159,7 +159,7 @@
     border-top-color: var(--table-border-light);
     border-left-color: var(--table-border-light);
     border-bottom-color: var(--table-border-light);
-    border-right-color: var(--table-border-dark);
+    border-right-color: var(--table-border-light);
   }
 
   & > ul {
@@ -167,10 +167,19 @@
       &:first-child {
         background-color: var(--table-head-bg-light);
       }
+      div {
+        button {
+          background-color: var(--table-head-bg-light);
+          border-color: var(--table-head-bg-light);
+          &:hover {
+            border-color: var(--table-border-light);
+          }
+        }
+      }
     }
   }
 
   a {
-    color: var(--interface-clr-light);
+    color: var(--extra-bg-light);
   }
 }

@@ -1,17 +1,18 @@
-import React, { useState, useRef  } from "react";
+import { useState, useRef } from "react";
 import styles from './selectInput.module.scss';
 import { useSelector } from "react-redux";
-import { searchUsers, searchBoss } from "../../user/userSliceAPI";
+import { searchUsers,  } from "../../user/userSliceAPI";
 import { TestLoader } from "./testLoader";
-import { darkTheme } from "../../main/mainpageSlice";
-import { user } from "../../user/userSlice";
+import { darkTheme, langMode } from '../../../appSlice';
+// import { user } from "../../user/userSlice";
 
 export const SelectInput = props => {
   const ref = useRef(null);
   const inputRefs = useRef([]);
   const {selectHandler, placeholder, val, name, mode, id} = props
-  const { api_key } = useSelector(user);
-  const dark = useSelector(darkTheme);
+  // const { api_key } = useSelector(user);
+  const darkMode = useSelector(darkTheme);
+
 
   const [value, setValue] = useState(val ? val : "")
   const [show, setShow] = useState(false)
@@ -21,19 +22,13 @@ export const SelectInput = props => {
     
   const onSearchUsers  = (string) => {
     if ( string ) {
-      if ( mode === 'user' ) searchUsers({'string': string, 'api_key': api_key}).then(value => {
+      if ( mode === 'user' ) searchUsers({'string': string, }).then(value => {
           setSelectList(value)
           setShow(true)
           setloading(false)
         });
-
-      if ( mode === 'boss' ) searchBoss({'string': string, 'api_key': api_key}).then(value => {
-        setSelectList(value)
-        setShow(true)
-        setloading(false)
-      })      
+     
     }
- 
   }
 
   const onInput = val => {
@@ -74,7 +69,7 @@ export const SelectInput = props => {
   const styleLoading = loading ? `${styles.loading} ${styles.showLoading}` : `${styles.loading}`
   const styleSelectList = show ? `${styles.selectList} ${styles.showSelectList}` : `${styles.selectList} ${styles.hideSelectList}`
 
-  const selectInputStyle = dark 
+  const selectInputStyle = darkMode 
   ? `${styles.selectInput} ${styles.dark}`
   : `${styles.selectInput}`
 

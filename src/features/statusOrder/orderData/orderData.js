@@ -17,13 +17,13 @@ export const OrderData = () => {
   
   const calcStatus = status => {
     switch( status ) {
-      case 'agreed': return <span style={{color: 'light-green'}}>{dictionary.status_complete[lang]}</span>;
-      case 'refused': return <span style={{color: 'red'}}>{dictionary.status_rejected[lang]}</span>;
-      case 'refused_timeout': return <span style={{color: 'red'}}>{dictionary.status_timeout[lang]}</span>;
-      case 'refused_failed': return <span style={{color: 'red'}}>{dictionary.status_errors[lang]}</span>;
-      case 'canceled': return <span style={{color: 'grey'}}>{dictionary.status_initiator[lang]}</span>;
-      case 'added': return <span style={{color: 'grey'}}>{dictionary.status_created[lang]}</span>;
-      default: return <span style={{color: 'orange'}}>{dictionary.status_inProgress[lang]}</span>;
+      case 'agreed': return <span style={{color: '#34B334'}}>{dictionary.status_complete[lang]}</span>;
+      case 'refused': return <span style={{color: '#FF4040'}}>{dictionary.status_rejected[lang]}</span>;
+      case 'refused_timeout': return <span style={{color: '#FF4040'}}>{dictionary.status_timeout[lang]}</span>;
+      case 'refused_failed': return <span style={{color: '#FF4040'}}>{dictionary.status_errors[lang]}</span>;
+      case 'canceled': return <span style={{color: '#91A3B0'}}>{dictionary.status_initiator[lang]}</span>;
+      case 'added': return <span style={{color: '#91A3B0'}}>{dictionary.status_created[lang]}</span>;
+      default: return <span style={{color: '#FFA700'}}>{dictionary.status_inProgress[lang]}</span>;
     }
   } 
 

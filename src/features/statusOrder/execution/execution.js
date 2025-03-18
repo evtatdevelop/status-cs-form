@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './execution.module.scss';
 import dark from '../../../dark.module.scss';
 import light from '../../../light.module.scss';
@@ -5,13 +6,17 @@ import { useSelector, } from "react-redux";
 import { orderData } from '../../order/orderSlice';
 import { darkTheme, langMode } from '../../../appSlice';
 import dictionary from "../../../dictionary.json";
+import { Modal } from '../../modal/modal';
+import { ModalCancel } from './modalCancel/modalCancel';
+import { ModalPass } from './modalPass/modalPass';
 
 export const Execution = () => {
-
   const order = useSelector(orderData);
   const lang = useSelector(langMode);
 
-  console.log('orderEx: ', order.execute_list);
+  const [modal, setModal] = useState(null);
+
+  // console.log('orderEx: ', order.execute_list);
   
   const cancExec = () => {
     console.log('cancExec');
@@ -66,33 +71,31 @@ export const Execution = () => {
                 </>
               : item.show_execution_buttons_flag  === '1'
                 ? <>
-                    <button type='button' onClick={ () => cancExec() }>Отметить выполнение</button>
-                    <button type='button' onClick={ () => passExec() }>Делегировать</button>
+                    <button type='button' onClick={ () => setModal('cancExec') }>Отметить выполнение</button>
+                    <button type='button' onClick={ () => setModal('passExec') }>Делегировать</button>
                   </>
                 : null
             }
-          
-      {/* // ( $item['asz70_execute_flag'] == 1 
-      //   ? 'Выполнено' 
-      //     .( $item['app12_id'] == $item['asz70_receive_app12_id'] ? '' : ' в режиме замещения' ) 
-      //     .( empty( $item['execute_fio_short'] ) ? '' : '<br>'. $item['execute_fio_short'] )
-      //     .( empty( $item['execute_email'] ) ? '' : '<br>'."<span style='font-size: 12px;'>"."<a href='mailto:". $item['execute_email'] ."'>". $item['execute_email'] .'</a>'.'</span>' )
-      //     .( empty( $item['asz70_execute_date'] ) ? '' : '<br>'."<span style='font-size: 12px;'>". date( 'd.m.Y', strtotime($item['asz70_execute_date'] )) .'</span>')
-        
-      //   :	( $item['show_execution_buttons_flag'] == 1 //|| $remote_user == 'SUEKCORP\TatarenkoEG'// !TEST 
-      //       ? "<div class='implementBtns' data-action='' data-session_key='". $item['asz70_session_key'] ."' data-order_id='". $result['main']['order_id'] ."'>
-      //           <button type='button' id='cancExec' class=''>Отметить выполнение</button>
-      //           <button type='button' id='passExec' class=''>Делегировать</button>
-      //         </div>" 
-      //       : ""
-      //     )
-      //   ); */}
-
           </div>
           <div>{item.asz70_comments}</div>
         </li>)}
 
       </ul>
+
+      { modal === 'cancExec'
+        ? <Modal>
+            <ModalCancel setModal = {setModal}/>
+          </Modal>
+        : null
+      }     
+
+      { modal === 'passExec'
+        ? <Modal>
+            <ModalPass setModal = {setModal}/>
+          </Modal>
+        : null
+      }     
+
     </div>    
   )
 }

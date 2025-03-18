@@ -166,6 +166,15 @@
       &:first-child {
         background-color: var(--table-head-bg-dark);
       }
+      div {
+        button {
+          background-color: var(--table-head-bg-dark);
+          border-color: var(--table-head-bg-dark);
+          &:hover {
+            border-color: var(--table-border-dark);
+          }
+        }
+      }
     }
   }
 

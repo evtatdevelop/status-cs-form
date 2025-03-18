@@ -38,6 +38,9 @@
         button {
           padding: 0.5vmax;
           overflow: hidden;
+          border-style: solid;
+          border-width: 0.1vmax;
+          transition: border-color 0.3s;
         }
         button:first-child {
           margin-bottom: 0.5vmax;
