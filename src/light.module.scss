@@ -13,6 +13,9 @@
 
   --extra-bg-light: #4c8cc9;
   --extra-clr-light: white;
+
+  --element-bg-light: #a0e6ff;
+  --element-focus-bg-light: #b2daff;
 }
 
 .app {
@@ -181,5 +184,74 @@
 
   a {
     color: var(--extra-bg-light);
+  }
+}
+
+.modal {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.modalPass {
+  background-color: white;
+  outline: 0.1vmax solid gray;
+
+  textarea {
+    outline: 0.1vmax solid gray;
+    color: var(--app-clr-light);
+  }
+
+  button {
+    background-color: var(--table-head-bg-light);
+    border-color: var(--table-head-bg-light);
+    &:hover {
+      border-color: var(--table-border-light);
+    }
+  }
+}
+
+.modalCancel {
+  background-color: white;
+  outline: 0.1vmax solid gray;
+
+  textarea {
+    outline: 0.1vmax solid gray;
+    color: var(--app-clr-light);
+  }
+
+  button {
+    background-color: var(--table-head-bg-light);
+    border-color: var(--table-head-bg-light);
+    &:hover {
+      border-color: var(--table-border-light);
+    }
+  }
+}
+
+.selectInput {
+  input {
+    color: var(--app-clr-light);
+  }
+  button {
+    color: var(--app-clr-light);
+    &:focus,
+    &:hover {
+      color: var(--attention-color-light);
+    }
+  }
+  ul {
+    border: 0.1vmax solid var(--table-border-light);
+    background-color: var(--status-bg-light);
+    label {
+      background-color: var(--table-head-bg-light);
+    }
+    input[type='radio'] {
+      &:focus,
+      &:hover {
+        & + label {
+          background-color: var(--element-focus-bg-light);
+        }
+      }
+    }
+    scrollbar-color: var(--table-head-bg-light) var(--extra-bg-light);
   }
 }

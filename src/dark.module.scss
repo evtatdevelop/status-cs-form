@@ -13,6 +13,9 @@
 
   --extra-bg-dark: #6e7f80;
   --extra-clr-dark: wheat;
+
+  --element-bg-dark: #a0e6ff;
+  --element-focus-bg-dark: #6b6b6b;
 }
 
 .app {
@@ -180,5 +183,70 @@
 
   a {
     color: var(--interface-clr-dark);
+  }
+}
+
+.modalPass {
+  background-color: #313131;
+  outline: 0.1vmax solid gray;
+
+  textarea {
+    outline: 0.1vmax solid gray;
+    color: var(--app-clr-dark);
+  }
+
+  button {
+    background-color: var(--table-head-bg-dark);
+    border-color: var(--table-head-bg-dark);
+    &:hover {
+      border-color: var(--table-border-dark);
+    }
+  }
+}
+
+.modalCancel {
+  background-color: #313131;
+  outline: 0.1vmax solid gray;
+
+  textarea {
+    outline: 0.1vmax solid gray;
+    color: var(--app-clr-dark);
+  }
+
+  button {
+    background-color: var(--table-head-bg-dark);
+    border-color: var(--table-head-bg-dark);
+    &:hover {
+      border-color: var(--table-border-dark);
+    }
+  }
+}
+
+.selectInput {
+  input {
+    color: var(--app-clr-dark);
+  }
+  button {
+    color: var(--app-clr-dark);
+    &:focus,
+    &:hover {
+      color: var(--attention-color-dark);
+    }
+  }
+  ul {
+    border: 0.1vmax solid var(--table-border-dark);
+    background-color: var(--status-bg-dark);
+    label {
+      background-color: var(--table-head-bg-dark);
+    }
+    input[type='radio'] {
+      &:focus,
+      &:hover {
+        & + label {
+          background-color: var(--element-focus-bg-dark);
+        }
+      }
+    }
+    scrollbar-color: var(--status-bg-dark) var(--app-clr-dark);
   }
 }

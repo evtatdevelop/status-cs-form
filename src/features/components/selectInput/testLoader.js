@@ -1,11 +1,11 @@
 import React from "react";
-// import { darkTheme } from "../../main/mainpageSlice";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { darkTheme, } from '../../../appSlice';
 
 export const TestLoader = () => {
 
-  // const dark = useSelector(darkTheme);
-  const color = false ? '#FFFFFF' : '#000000';
+  const darkMode = useSelector(darkTheme);
+  const color = darkMode ? '#FFFFFF' : '#000000';
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">

@@ -1,19 +1,17 @@
 import { useState, useRef } from "react";
 import styles from './selectInput.module.scss';
+import dark from '../../../dark.module.scss';
+import light from '../../../light.module.scss';
 import { useSelector } from "react-redux";
 import { searchUsers,  } from "../../user/userSliceAPI";
 import { TestLoader } from "./testLoader";
-import { darkTheme, langMode } from '../../../appSlice';
-// import { user } from "../../user/userSlice";
+import { darkTheme, } from '../../../appSlice';
+import dictionary from "../../../dictionary.json";
 
 export const SelectInput = props => {
   const ref = useRef(null);
   const inputRefs = useRef([]);
   const {selectHandler, placeholder, val, name, mode, id} = props
-  // const { api_key } = useSelector(user);
-  const darkMode = useSelector(darkTheme);
-
-
   const [value, setValue] = useState(val ? val : "")
   const [show, setShow] = useState(false)
   const [timerId, setTimerId] = useState(null)
@@ -54,7 +52,6 @@ export const SelectInput = props => {
     onSearchUsers(e.target.value)
   }
 
-  // const onBlur = () => setTimeout(()=>setShow(false), 100)
   const onBlur = () => {}
 
   const clearInput = () => {
@@ -69,14 +66,10 @@ export const SelectInput = props => {
   const styleLoading = loading ? `${styles.loading} ${styles.showLoading}` : `${styles.loading}`
   const styleSelectList = show ? `${styles.selectList} ${styles.showSelectList}` : `${styles.selectList} ${styles.hideSelectList}`
 
-  const selectInputStyle = darkMode 
-  ? `${styles.selectInput} ${styles.dark}`
-  : `${styles.selectInput}`
-
+  const darkMode = useSelector(darkTheme);
+  const selectInputStyle = darkMode ? `${styles.selectInput} ${dark.selectInput}` : `${styles.selectInput} ${light.selectInput}`;
 
   const keyDown = (e, i, item) => {
-    // console.log(e.code);
-    
     if ( e.code === 'ArrowDown' || e.code === 'ArrowUp' || e.code === 'Enter' || e.code === 'Escape' ) e.preventDefault();
     switch ( e.code ) {
       case 'ArrowDown': 
@@ -100,7 +93,6 @@ export const SelectInput = props => {
         break;
     } 
   }
-
 
   return (
     <div className={selectInputStyle}>

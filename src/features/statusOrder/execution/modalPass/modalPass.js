@@ -1,10 +1,18 @@
 import styles from './modalPass.module.scss';
+import { useSelector } from "react-redux";
 import { SelectInput } from '../../../components/selectInput/selectInput';
+import dark from '../../../../dark.module.scss';
+import light from '../../../../light.module.scss';
+import { darkTheme, } from '../../../../appSlice';
 
 export const ModalPass = props => {
 
+
+  const darkMode = useSelector(darkTheme);
+  const selectVodalPass = darkMode ? `${styles.modalPass} ${dark.modalPass}` : `${styles.modalPass} ${light.modalPass}`;
+
   return (
-    <div className={styles.modalPass}>
+    <div className={selectVodalPass}>
       <textarea/>
       <SelectInput
         selectHandler = { val => console.log(val) }
