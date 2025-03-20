@@ -201,8 +201,13 @@
   }
 
   button {
-    background-color: var(--table-head-bg-light);
-    border-color: var(--table-head-bg-light);
+    color: var(--app-clr-light);
+    border-color: var(--table-border-light);
+    background-color: var(--extra-bg-light);
+    color: var(--extra-clr-light);
+
+    // background-color: var(--table-head-bg-light);
+    // border-color: var(--table-head-bg-light);
     &:hover {
       border-color: var(--table-border-light);
     }
@@ -219,8 +224,13 @@
   }
 
   button {
-    background-color: var(--table-head-bg-light);
-    border-color: var(--table-head-bg-light);
+    color: var(--app-clr-light);
+    border-color: var(--table-border-light);
+    background-color: var(--extra-bg-light);
+    color: var(--extra-clr-light);
+
+    // background-color: var(--table-head-bg-light);
+    // border-color: var(--table-head-bg-light);
     &:hover {
       border-color: var(--table-border-light);
     }

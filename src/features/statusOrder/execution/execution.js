@@ -16,17 +16,8 @@ export const Execution = () => {
 
   const [modal, setModal] = useState(null);
 
-  // console.log('orderEx: ', order.execute_list);
+  console.log('orderEx: ', order);
   
-  const cancExec = () => {
-    console.log('cancExec');
-    
-  }
-  const passExec = () => {
-    console.log('passExec');
-    
-  }
-
   const darkMode = useSelector(darkTheme);
   const styleExecution = darkMode ? `${styles.execution} ${dark.execution}` : `${styles.execution} ${light.execution}`;
 
@@ -42,7 +33,7 @@ export const Execution = () => {
           <label>{dictionary.comment[lang]}</label>          
         </li>
 
-        { order.execute_list.map((item, index) => <li key={index}>
+        { order.execute_list.map((item, index) => <li key={item.asz70_id}>
           <div>
             {item.fio_short}
             <span className={styles.smaller}>{item.position_name}</span>
@@ -53,26 +44,26 @@ export const Execution = () => {
           <div>
             { item.asz70_receive_flag === '1'
               ? <>
-                  Получено {item.app12_id !== item.asz70_receive_app12_id ? ' в режиме замещения' : ''}
+                  {dictionary.received[lang]} {item.app12_id !== item.asz70_receive_app12_id ? ` ${dictionary.deputy_mode[lang]}` : ''}
                   <span>{item.receive_fio_short}</span>
                   <a className={styles.smaller} href={`mailto:${item.receive_email}`}>{item.receive_email}</a>
                   <span className={styles.smaller}>{item.asz70_receive_date}</span>
                 </>
-              : 'Не получено'  
+              : `${dictionary.not_received[lang]}`  
             }
           </div>
           <div>
             { item.asz70_execute_flag === '1'
               ? <>
-                'Выполнено' {item.app12_id !== item.asz70_receive_app12_id ? ' в режиме замещения' : ''}
+                'Выполнено' {item.app12_id !== item.asz70_receive_app12_id ? ` ${dictionary.deputy_mode[lang]}` : ''}
                 <span>{item.execute_fio_short}</span>
                 <a className={styles.smaller} href={`mailto:${item.execute_email}`}>{item.execute_email}</a>
                 <span className={styles.smaller}>{item.asz70_execute_date}</span>
                 </>
               : item.show_execution_buttons_flag  === '1'
                 ? <>
-                    <button type='button' onClick={ () => setModal('cancExec') }>Отметить выполнение</button>
-                    <button type='button' onClick={ () => setModal('passExec') }>Делегировать</button>
+                    <button type='button' onClick={ () => setModal({'mode': 'cancExec', 'session_key': item.asz70_session_key, 'asz31_id': order.main.asz31_id}) }>{dictionary.mark_completed_btn[lang]}</button>
+                    <button type='button' onClick={ () => setModal({'mode': 'passExec', 'session_key': item.asz70_session_key, 'asz31_id': order.main.asz31_id}) }>{dictionary.delegate_authority_btn[lang]}</button>
                   </>
                 : null
             }
@@ -82,16 +73,16 @@ export const Execution = () => {
 
       </ul>
 
-      { modal === 'cancExec'
+      { modal?.mode === 'cancExec'
         ? <Modal>
-            <ModalCancel setModal = {setModal}/>
+            <ModalCancel setModal = {setModal} modal = {modal}/>
           </Modal>
         : null
       }     
 
-      { modal === 'passExec'
+      { modal?.mode === 'passExec'
         ? <Modal>
-            <ModalPass setModal = {setModal}/>
+            <ModalPass setModal = {setModal} modal = {modal}/>
           </Modal>
         : null
       }     

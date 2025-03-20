@@ -219,6 +219,31 @@
     "RU": "Отметка о выполнении",
     "ZH": "标记为完成"
   },
+  "mark_completed_btn": {
+    "EN": "Mark as done",
+    "RU": "Отметить выполнение",
+    "ZH": "标记为完成"
+  },
+  "delegate_authority_btn": {
+    "EN": "Delegate authority",
+    "RU": "Делегировать",
+    "ZH": "委派权力"
+  },
+  "received": {
+    "EN": "Received",
+    "RU": "Получено",
+    "ZH": "已收到"
+  },
+  "not_received": {
+    "EN": "Not received",
+    "RU": "Не получено",
+    "ZH": "未收到"
+  },
+  "ok_btn": {
+    "EN": "Ok",
+    "RU": "ОК",
+    "ZH": "好的"
+  },
 
   "application": {
     "EN": "application",
